@@ -1,0 +1,119 @@
+@keyframes down
+	0%
+		+transform(translateX(-50%)translateY(-10px))
+		opacity: 0.5
+	50%
+		+transform(translateX(-50%)translateY(0px))
+		opacity: 1
+	100%
+		+transform(translateX(-50%)translateY(-10px))
+		opacity: 0.5
+		
+.banner-wrap
+	+pos(rel,null)
+	&:after
+		content: ''
+		display: block
+		height: 150px
+		background: url(../img/cloud.png) center bottom no-repeat
+		background-size: 100% 100px
+		z-index: 1
+		+pos(abs, null 0 0 0)
+		display: none
+	.banner
+		.slick-dots
+			+pos(abs, 50% 30px null null)
+			+transform(translateY(-50%))
+			opacity: 0.8
+			li
+				display: block
+				width: 10px
+				height: 10px
+				+bor-rad(50px)
+				background: none
+				border: 1px solid color-rgba($white,1)
+				cursor: pointer
+				+transition(all,0.5s)
+				+ li
+					margin-top: 5px
+				&.slick-active
+					background: color-rgba($white,1)
+					height: 20px
+				button
+					display: none
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			+fs(0)
+			width: 36px
+			height: 36px
+			line-height: 34px
+			text-align: center
+			+bor-rad(50px)
+			background: $white
+			z-index: 5
+			opacity: 0
+			box-shadow: 0px 10px 20px -10px color-rgba($black,0.1)
+			&:before
+				content: ''
+				+fs(22rem)
+			&:hover
+				opacity: 1
+				box-shadow: 0px 10px 20px -10px color-rgba($black,0.5)
+		.slick-prev
+			left: 50px
+			&:before
+				content: '\f104'
+		.slick-next
+			right: 50px
+			&:before
+				content: '\f105'
+		&:hover
+			.slick-prev
+				opacity: 0.5
+				left: 100px
+				&:hover
+					opacity: 1
+					box-shadow: 0px 10px 20px -10px color-rgba($black,0.5)
+			.slick-next
+				opacity: 0.5
+				right: 100px
+				&:hover
+					opacity: 1
+					box-shadow: 0px 10px 20px -10px color-rgba($black,0.5)
+		.banner-img
+			display: block
+			+media-breakpoint-down(sm)
+				+flexbox
+				align-items: center
+				justify-content: center
+				max-height: 240px
+			+media-breakpoint-down(xs)
+				max-height: 200px
+			img
+				width: 100%
+				+media-breakpoint-down(sm)
+					min-height: 240px
+				+media-breakpoint-down(xs)
+					min-height: 180px
+					object-fit: cover
+				// height: calc(100vh - 200px)
+				// height: 500px
+				// object-fit: cover
+				// filter: brightness(80%)
+		.item
+			+pos(rel,null)
+			overflow: hidden
+			&.slick-current
+	.btn-down
+		+pos(abs, null null 10% 50%)
+		z-index: 10
+		+transform(translateX(-50%)translateY(-5px))
+		+fs(28rem)
+		color: $white
+		cursor: pointer
+		opacity: 0.5
+		animation-name: down
+		animation-duration: 2s
+		animation-iteration-count: infinite
+		display: none

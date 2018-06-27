@@ -1,0 +1,565 @@
+
+.product-list
+	.row
+		margin: 0px -10px
+	.col-12
+		padding: 0px 10px
+		margin-bottom: 20px
+	.banner-qc
+		margin: 0px 0
+	.product-col
+		display: block
+		height: 100%
+		+bor-rad(5px)
+		background: $white
+		border: 1px solid darken($white,10%)
+		overflow: hidden
+		// margin-bottom: 15px
+		figure
+			.product-img
+				+pos(rel,null)
+				overflow: hidden
+				img
+					width: 100%
+					+transition(all,0.3s)
+				.link
+					+pos(abs, 50% null null 50%)
+					+transform(translateY(-50%)translateX(-50%)scale3d(1.5,1.5,1))
+					opacity: 0
+					z-index: 1
+					background: linear-gradient(to right,lighten($cyan,10%),$blue)
+					box-shadow: 0px 10px 20px -10px $cyan
+					color: $white
+					+bor-rad(50px)
+					+fs(12rem)
+					line-height: 30px
+					padding: 0px 20px
+					+transition(all,0.3s)
+					&:hover
+						filter: brightness(110%)
+			figcaption
+				padding: 10px 15px
+				+bor-rad(0 0 5px 5px)
+				.product-name
+					height: 0.8125rem*1.3*2
+					font-weight: 500
+					+fs(14rem)
+					line-height: 1.3
+					-webkit-line-clamp: 2
+					-webkit-box-orient: vertical
+					overflow: hidden
+					text-overflow: ellipsis
+					color: $black
+					margin-bottom: 5px
+				time
+					display: block
+					+fs(12rem)
+					color: darken($white,60%)
+					line-height: 1.5
+					// margin-bottom: 5px
+					&:before
+						content: '\f017'
+						margin-right: 10px
+						color: $blue
+				.product-price
+					.new
+						display: inline-block
+						+fs(14rem)
+						font-weight: 600
+						color: $blue
+						margin-right: 10px
+					.old
+						display: inline-block
+						+fs(12rem)
+						color: darken($white,40%)
+						text-decoration: line-through
+			&:hover
+				.product-img
+					img
+						filter: brightness(80%)
+						+transform(scale3d(1.1,1.1,1))
+					.link
+						+transform(translateY(-50%)translateX(-50%)scale3d(1,1,1))
+						opacity: 1
+	
+.product-page
+	margin: 40px 0
+	.product-list
+		margin-bottom: 20px
+	.product-page-banner
+		overflow: hidden
+		+bor-rad(5px)
+		margin-bottom: 20px
+		.slick-dots
+			+pos(abs, null 30px 10px null)
+			+transform(translateY(-50%))
+			opacity: 0.5
+			li
+				display: block
+				float: left
+				width: 10px
+				height: 10px
+				+bor-rad(50px)
+				background: none
+				border: 1px solid color-rgba($black,1)
+				cursor: pointer
+				+transition(all,0.5s)
+				+ li
+					margin-left: 5px
+				&.slick-active
+					background: color-rgba($black,1)
+					width: 20px
+				button
+					display: none
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			+fs(0)
+			width: 36px
+			height: 36px
+			line-height: 34px
+			text-align: center
+			+bor-rad(50px)
+			background: $white
+			z-index: 5
+			opacity: 0.5
+			box-shadow: 0px 10px 20px -10px color-rgba($black,0.1)
+			&:before
+				content: ''
+				+fs(22rem)
+			&:hover
+				opacity: 1
+				box-shadow: 0px 10px 20px -10px color-rgba($black,0.5)
+		.slick-prev
+			left: -50px
+			&:before
+				content: '\f104'
+		.slick-next
+			right: -50px
+			&:before
+				content: '\f105'
+		&:hover
+			.slick-prev
+				left: 10px
+			.slick-next
+				right: 10px
+	.category-info
+		margin-bottom: 20px
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: space-between
+		width: 100%
+		.product-sort
+			// float: right
+			width: 130px
+			select
+				+bor-rad(5px)
+				+fs(13rem)
+				border: 1px solid darken($white,10%)
+				padding: 6px 10px
+				cursor: pointer
+				color: darken($white,60%)
+		.page-name-wrap
+			width: calc(100% - 130px)
+		.page-title
+			margin-bottom: 0
+		.amount
+			color: darken($white,40%)
+			+fs(13rem)
+			strong
+				color: $blue
+				font-weight: 500
+	.product-main-name
+		+fs(20rem)
+		font-weight: 400
+		color: $black
+		line-height: 1.3
+		margin-bottom: 15px
+		+pos(rel,null)
+		&:after
+			content: ''
+			display: block
+			width: 60px
+			height: 2px
+			background: linear-gradient(to right,lighten($cyan,10%),$blue)
+			margin-top: 10px
+		.tag
+			+fs(14rem)
+			display: inline-block
+			vertical-align: middle
+			color: $white
+			padding: 3px 15px
+			+bor-rad(5px)
+			margin-right: 10px
+			display: none
+			&.hotel
+				background: lighten($red,10%)
+			&.tour
+				background: lighten($purple,10%)
+			&.golf
+				background: lighten($green,10%)
+	.slide-wrap
+		margin-bottom: 40px
+	.product-slide
+		margin-bottom: 6px
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			+fs(0)
+			z-index: 5
+			color: $white
+			text-shadow: 0 3px 10px color-rgba($black,0.5)
+			&:before
+				content: ''
+				+fs(28rem)
+		.slick-prev
+			left: 15px
+			&:before
+				content: '\f104'
+		.slick-next
+			right: 15px
+			&:before
+				content: '\f105'
+		.item
+			.img
+				+flexbox
+				justify-content: center
+				align-items: center
+				align-content: center
+				width: 100%
+				img
+					width: 100%
+					max-width: 100%
+					height: 400px
+					object-fit: cover
+	.product-nav
+		overflow: hidden
+		.slick-list
+			margin: 0px -3px
+		.item
+			padding: 0px 3px
+			.img
+				cursor: pointer
+				+flexbox
+				justify-content: center
+				align-items: center
+				align-content: center
+				width: 100%
+				img
+					width: 100%
+					max-width: 100%
+					height: 60px
+					object-fit: cover
+					border: 2px solid transparent
+					+transition(all,0.3s)
+			&.slick-current
+				.img
+					img
+						border: 2px solid $blue
+	.product-info
+		margin-bottom: 40px
+		.product-id
+			+fs(13rem)
+			color: darken($white,40%)
+			strong
+				font-weight: 500
+		time
+			display: block
+			color: darken($white,60%)
+			+fs(14rem)
+			&:before
+				content: '\f017'
+				margin-right: 5px
+				color: $blue
+				display: inline-block
+				width: 20px
+				text-align: center
+
+		.product-location
+			color: darken($white,60%)
+			+fs(14rem)
+			margin-bottom: 15px
+			&:before
+				content: '\f041'
+				margin-right: 5px
+				color: $blue
+				display: inline-block
+				width: 20px
+				text-align: center
+			a
+				color: $blue
+				margin-left: 5px
+		.product-overview
+			+fs(13rem)
+			color: darken($white,60%)
+			+bor-rad(5px)
+			padding: 10px
+			background: darken($white,2%)
+			border: 1px solid darken($white,5%)
+			margin-bottom: 15px
+		.product-price
+			border-bottom: 1px solid darken($white,10%)
+			padding-bottom: 10px
+			margin-bottom: 15px
+			.old
+				+fs(18rem)
+				font-weight: 500
+				color: darken($white,40%)
+				text-decoration: line-through
+				line-height: 1
+				.sale
+					display: inline-block
+					vertical-align: middle
+					+fs(13rem)
+					font-weight: 500
+					padding: 3px 5px
+					+bor-rad(3px)
+					+transform(translateY(-2px))
+					border: 1px solid lighten($red,30%)
+					background: lighten($red,40%)
+					color: lighten($red,0%)
+					margin-left: 10px
+			.new
+				+fs(28rem)
+				font-weight: 500
+				color: lighten($red,10%)
+		.input-number
+			vertical-align: top
+		.product-intro
+			display: inline-block
+			vertical-align: top
+			margin-left: 15px
+			margin-bottom: 15px
+			.intro-col
+				figure
+					+flexbox
+					width: 150px
+					.icon
+						width: 40px
+						height: 40px
+						line-height: 38px
+						text-align: center
+						+bor-rad(50px)
+						border: 1px solid darken($white,10%)
+						+fs(24rem)
+						color: $blue
+					figcaption
+						+flexbox
+						align-content: center
+						align-items: center
+						width: calc(100% - 40px)
+						padding-left: 5px
+						+fs(12rem)
+						line-height: 1.3
+						color: darken($white,60%)
+		.btn-wrap
+		.btn-buy
+			display: inline-block
+			+mainbutton
+			line-height: 40px
+			padding: 0px 50px
+			text-transform: uppercase
+		.share
+			margin-top: 20px
+	.product-policy
+		+bor-rad(5px)
+		border: 1px solid darken($white,10%)
+		// background: darken($white,2%)
+		padding: 15px 15px 30px
+		+pos(rel,null)
+		margin-bottom: 40px
+		.policy-wrap
+			max-height: 200px
+			overflow: hidden
+			+transition(all,1s)
+			&.open
+				max-height: 2000px
+		.content
+			// +fs(14rem)
+		.btn-expand
+			// +mainbutton
+			display: inline-block
+			+bor-rad(50px)
+			border: 1px solid darken($white,10%)
+			color: darken($white,40%)
+			background: $white
+			+fs(13rem)
+			line-height: 34px
+			padding: 0px 25px
+			+pos(abs, null null -17px 50%)
+			+transform(translateX(-50%))
+			z-index: 1
+			cursor: pointer
+			+transition(all,0.3s)
+			&:after
+				content: '\f107'
+				display: inline-block
+				// +transition(all,0.3s)
+				// +pos(abs, 0 15px null null)
+				margin-left: 5px
+			&:hover
+				color: $white
+				background: $blue
+				border-color: $blue
+				// +mainbutton
+				// border: none
+			&.active
+				&:after
+					+transform(scaleY(-1))
+	.product-detail
+		margin-bottom: 40px
+		ul.tabs-list
+			+bor-rad(50px)
+			padding: 5px
+			background: darken($white,5%)
+			margin-bottom: 20px
+			li.tab-link
+				a
+					display: inline-block
+					line-height: 34px
+					+bor-rad(50px)
+					+fs(13rem)
+					color: darken($white,60%)
+					padding: 0px 20px
+				&.r-tabs-state-active
+					a
+						background: linear-gradient(to right, lighten($cyan,10%),$blue)
+						color: $white
+						box-shadow: 0 10px 20px -10px $cyan
+		.tab-content
+			padding: 0
+		
+			
+	.product-place
+		+bor-rad(5px)
+		border: 1px solid lighten($blue,30%)
+		background: lighten($blue,45%)
+		padding: 15px 20px
+		margin: 0 0 40px
+		.sidebar-title
+			span
+				background: lighten($blue,45%)
+				color: $blue
+		.content
+			+fs(13rem)
+			color: $main
+			p
+				margin-bottom: 5
+.product-item
+	+bor-rad(5px)
+	border: 1px solid darken($white,10%)
+	padding: 20px
+	margin: 30px 0
+	background: darken($white,2%)
+	+pos(rel,null)
+	figure
+		+flexbox
+		flex-wrap: wrap
+		margin-bottom: 20px
+	.product-img
+		width: 150px
+		img
+			width: 100%
+	figcaption
+		width: calc(100% - 150px)
+		padding: 0px 0px 0px 20px
+	.product-main-name
+		+fs(16rem)
+		font-weight: 500
+		margin-bottom: 5px
+		color: $blue
+		&:after
+			display: none
+	.product-price
+		margin-bottom: 5px
+		+fs(14rem)
+		.old
+			color: darken($white,40%)
+			line-height: 1
+			strong
+				+fs(14rem)
+				text-decoration: line-through
+				font-weight: 500
+			.sale
+				display: inline-block
+				vertical-align: middle
+				+fs(12rem)
+				font-weight: 500
+				padding: 3px 5px
+				+bor-rad(3px)
+				+transform(translateY(-2px))
+				border: 1px solid lighten($red,30%)
+				background: lighten($red,40%)
+				color: lighten($red,0%)
+				margin-left: 10px
+		.new
+			strong 
+				font-weight: 600
+				+fs(18rem)
+				color: lighten($red,10%)
+	.btn-buy
+		// +pos(abs, null 15px 20px null)
+		display: inline-block
+		+mainbutton
+		line-height: 32px
+		padding: 0px 25px
+		+fs(13rem)
+		text-transform: uppercase
+	.content
+		ul, ol, p, h1, h2, h3, h4, h5, h6, img, figure
+			margin-bottom: 5px
+			&:last-child
+				margin-bottom: 0
+
+.product-related
+	margin-bottom: 40px
+	.product-list
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			z-index: 5
+			+fs(0)
+			color: $white
+			background: linear-gradient(to right,lighten($cyan,10%),$blue)
+			
+			+bor-rad(50px)
+			width: 36px
+			height: 36px
+			line-height: 36px
+			text-align: center
+			&:before
+				content: ''
+				+fs(28rem)
+			&:hover
+				filter: brightness(110%)
+				box-shadow: 0 10px 20px -10px $cyan
+			&.slick-disabled
+				opacity: 0.2
+		.slick-prev
+			left: -50px
+			padding-right: 2px
+			+media-breakpoint-down(lg)
+				left: -40px
+			+media-breakpoint-down(xs)
+				left: 0px
+			&:before
+				content: '\f104'
+		.slick-next
+			right: -50px
+			padding-left: 2px
+			+media-breakpoint-down(lg)
+				right: -40px
+			+media-breakpoint-down(xs)
+				right: 0
+			&:before
+				content: '\f105'
+		.slick-list
+			margin: 0px -10px
+		.slick-track
+			+flexbox
+		.item
+			padding: 0px 10px 10px
+.product-detail-page
+	.pages.productdetailpager
+		display: none

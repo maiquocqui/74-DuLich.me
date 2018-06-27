@@ -1,0 +1,439 @@
+body
+	padding-top: 100px
+	+media-breakpoint-down(lg)
+		padding-top: 60px
+	&.homepage
+		// padding-top: 0
+header
+	background: $white
+	// +pos(abs, 0 0 null 0)
+	// z-index: 1000
+	// +media-breakpoint-down(lg)
+	+pos(fix, 0 0 null 0)
+	z-index: 1000
+	&.hide
+		+media-breakpoint-up(xl)
+			// +pos(fix, 0 0 null 0)
+			// +transform(translateY(-100%))
+	&.minimal
+		+media-breakpoint-up(xl)
+			// +transition(all,0.5s)
+			// +transform(translateY(0))
+		box-shadow: 0 10px 30px -10px color-rgba($black,0.2)
+	.container
+		+media-breakpoint-down(lg)
+			max-width: 100%
+			width: 100%
+	.header-top
+		background: $black
+		// background: linear-gradient(to right,lighten($cyan,10%),$blue)
+		// height: 60px
+		+media-breakpoint-down(lg)
+			display: none
+	.social
+		line-height: 30px
+		+fs(13rem)
+		+flexbox
+		align-items: center
+		align-content: center
+		// color: darken($white,60%)
+		color: $white
+		float: left
+		.social-list
+			+flexbox
+			align-items: center
+			align-content: center
+			a
+				display: block
+				// color: $black
+				color: $white
+				margin-left: 10px
+				+fs(15rem)
+	.colright
+		float: right
+		clear: right
+	.language
+		float: left
+		.dropdown
+			.dropdown-toggle
+				+fs(13rem)
+				line-height: 30px
+				margin: 0
+				padding: 0
+				// color: darken($white,60%)
+				color: $white
+				&:after
+					content: '\f107'
+					width: auto
+					height: auto
+					display: inline-block
+					vertical-align: middle
+					border: none
+			.dropdown-menu
+				min-width: 120px
+				+bor-rad(5px)
+				.dropdown-item
+					+fs(13rem)
+					line-height: 1.5
+					padding: 5px 15px
+					&.active
+						background: color-rgba($blue,0.1)
+						color: $blue
+	.login
+		float: left
+		margin-left: 20px
+		.dropdown
+			.dropdown-toggle
+				+fs(13rem)
+				line-height: 30px
+				margin: 0
+				padding: 0
+				// color: darken($white,60%)
+				color: $white
+				&:before
+					content: '\f007'
+					margin-right: 5px
+				&:after
+					display: none
+			.login-menu
+				padding: 15px
+				+bor-rad(10px)
+				ul
+					li
+						margin-bottom: 10px
+						&:last-child
+							margin-bottom: 0px
+						.btn-login
+							display: block
+							+fs(14rem)
+							+mainbutton
+							white-space: nowrap
+							line-height: 36px
+							padding: 0px 20px
+							.fa
+								display: inline-block
+								margin-right: 10px
+								width: 20px
+								text-align: center
+							&.google
+								background: linear-gradient(to right, lighten($google,20%),$google)
+								box-shadow: 0 10px 20px -10px color-rgba(lighten($google,20%),1)
+								text-align: left
+							&.facebook
+								background: linear-gradient(to right, lighten($facebook,20%),$facebook)
+								box-shadow: 0 10px 20px -10px color-rgba(lighten($facebook,20%),1)
+								text-align: left
+
+							
+	.header-menu
+		background: $white
+		// +bor-rad(5px)
+		// padding: 0 30px
+		// margin-top: -30px
+		// box-shadow: 0 10px 20px -10px color-rgba($black,0.3)
+	.sitelogo
+		+flexbox
+		height: 70px
+		float: left
+		align-items: center
+		align-content: center
+		+media-breakpoint-down(lg)
+			height: 60px
+		a
+			display: block
+		img
+			filter: brightness(110%)
+			+media-breakpoint-down(lg)
+				height: 30px
+	.btn-showmenu
+		display: none
+		+fs(20rem)
+		width: 40px
+		height: 40px
+		line-height: 40px
+		margin: 10px 10px 10px 0
+		text-align: center
+		// border: 1px solid darken($white,10%)
+		float: left
+		+media-breakpoint-down(lg)
+			display: block
+	.menu
+		+flexbox
+		align-items: center
+		align-content: center
+		height: 70px
+		float: left
+		+media-breakpoint-down(lg)
+			height: unset
+			+pos(fix, 0 null 0 0)
+			right: 0
+			z-index: 1000
+			background: linear-gradient(135deg,color-rgba($blue,0.95),color-rgba($cyan,0.95))
+			+transform(translateX(-100%))
+			+transition(all,0.5s)
+			flex-wrap: wrap
+			align-items: flex-start
+			align-content: flex-start
+			padding: 20px 30px
+			&.open
+				+transform(translateX(0%))
+		.social-list
+			+flexbox
+			width: 100%
+			margin-bottom: 20px
+			a
+				color: $white
+				+fs(20rem)
+				+ a
+					margin-left: 25px
+		.btn-closemenu
+			display: none
+			position: absolute
+			top: 20px
+			right: 20px
+			color: #fff
+			font-size: 1.5rem
+			line-height: 1
+			+media-breakpoint-down(lg)
+				display: block
+		.menu-content
+			+media-breakpoint-down(lg)
+				width: 100%
+		.menu-wrap
+			float: left
+			+media-breakpoint-down(lg)
+				float: none
+		ul.menulink
+			+flexbox
+			+media-breakpoint-down(lg)
+				flex-wrap: wrap
+			> li
+				padding: 10px 0
+				+media-breakpoint-down(lg)
+					padding: 0
+					width: 100%
+				+ li
+					margin-left: 30px
+					+media-breakpoint-down(lg)
+						margin-left: 0
+				> a
+					display: block
+					+fs(14rem)
+					font-weight: 500
+					color: darken($white,40%)
+					+pos(rel,null)
+					padding: 5px 0
+					line-height: 20px
+					+media-breakpoint-down(lg)
+						color: $white
+						opacity: 0.8
+						line-height: 1.5
+						padding: 10px 0
+						+fs(20rem)
+						font-weight: 700
+					&:after
+						content: ''
+						display: block
+						+pos(abs, null 100% 0 0)
+						height: 2px
+						background: linear-gradient(to right,lighten($cyan,10%),$blue)
+						+transition(all,0.5s)
+				&.hassub
+					+pos(rel,null)
+					.btn-showsub
+						+pos(abs, 13px 10px null null)
+						color: $white 
+						+fs(16rem)
+						&.active
+							+transform(scale(1,-1))
+					.sub
+						+pos(abs, 100% null null 0)
+						// +transform(translateX(-50%))
+						background: color-rgba($main,0.9)
+						+bor-rad(5px)
+						min-width: 200px
+						padding: 10px 0
+						white-space: nowrap
+						opacity: 0
+						visibility: hidden
+						+transform(translateY(10px))
+						+media-breakpoint-down(lg)
+							+pos(static,unset)
+							background: color-rgba($black,0.1)
+							+transform(translateY(0))
+							visibility: visible
+							opacity: 1
+							display: none
+						ul
+							li
+								a
+									display: block
+									+fs(14rem)
+									color: $white
+									padding: 8px 15px
+									+bor-rad(3px)
+									+media-breakpoint-down(lg)
+
+								&:hover
+									a
+										// background: color-rgba($blue,0.1)
+										color: $cyan
+				&:hover
+					> a
+						&:after
+							right: 0
+							+media-breakpoint-down(lg)
+								right: unset
+					.sub
+						+media-breakpoint-up(xl)
+							opacity: 1
+							visibility: visible
+							+transform(translateY(0px))
+							+transition(all,0.3s)
+						
+				&.active
+					> a
+						color: $main
+						+media-breakpoint-down(lg)
+							color: $white
+							opacity: 1
+							&:before
+								content: ''
+								display: inline-block
+								vertical-align: middle
+								margin-right: 10px
+								width: 16px
+								height: 3px
+								background: $white
+						&:after
+							right: 0
+							+media-breakpoint-down(lg)
+								right: unset
+		.cart
+			float: left
+			margin-left: 30px
+			padding: 15px 0
+			.cart-toggle
+				+fs(18rem)
+				color: $black
+				+pos(rel,null)
+				line-height: 20px
+				padding: 0px 10px 0 0
+				.cart-amount
+					+fs(11rem)
+					color: $white
+					+bor-rad(50px)
+					line-height: 1
+					text-align: center
+					padding: 1px 5px
+					background: linear-gradient(to right,lighten($orange,0%),$red)
+					box-shadow: 0px 10px 20px -10px color-rgba($orange,1)
+					+pos(abs,-5px 0 null null)
+	.search
+		float: left
+		+pos(rel,null)
+		height: 70px
+		margin-left: 30px
+		+flexbox
+		align-items: center
+		align-content: center
+		+media-breakpoint-down(lg)
+			height: 60px
+		.search-toggle
+			color: darken($white,60%)
+			cursor: pointer
+			+media-breakpoint-down(lg)
+				+fs(18rem)
+			&:hover
+				color: $blue
+		.search-wrap
+			+pos(fix, 0 null 0 0)
+			right: 0
+			background: color-rgba($white,0.9)
+			+flexbox
+			justify-content: center
+			align-items: center
+			align-content: center
+			z-index: 1000
+			visibility: hidden
+			opacity: 0
+			+transition(all,0.5s)
+			&.open
+				visibility: visible
+				opacity: 1
+			.btn-closesearch
+				position: absolute
+				top: 20px
+				right: 20px
+				color: $black
+				font-size: 1.5rem
+				line-height: 1
+				cursor: pointer
+				&:hover
+					color: $red
+			.searchbox
+				+flexbox
+				background: linear-gradient(to right,lighten($cyan,10%), $blue)
+				box-shadow: 0px 10px 20px -10px color-rgba($cyan,1)
+				+bor-rad(50px)
+				width: 500px
+				+media-breakpoint-down(sm)
+					width: 300px
+				+media-breakpoint-down(xs)
+					width: 280px
+				input
+					width: calc(100% - 50px)
+					line-height: 50px
+					padding: 0px 15px
+					border: none
+					background: none
+					color: $white
+					+fs(18rem)
+					&::-webkit-input-placeholder
+						color: $white
+						opacity: 0.5
+				.searchbutton
+					width: 50px
+					height: 50px
+					line-height: 50px
+					text-align: center
+					color: $white
+					+fs(20rem)
+					border: none
+					background: none
+			
+
+.homepage
+	// header
+	// 	background: none
+	// 	.header-top
+	// 		background: none
+	// 	.sitelogo
+	// 		img
+	// 			filter: invert(100%) grayscale(100%) brightness(500%)
+	// 	.header-menu
+	// 		background: none
+	// 		border-top: 1px solid color-rgba($white,0.3)
+	// 	.menu
+	// 		ul.menulink
+	// 			> li
+	// 				> a
+	// 					color: $white
+	// 	&.hide
+	// 		background: $white
+	// 		.header-top
+	// 			background: $black
+	// 		.sitelogo
+	// 			img
+	// 				filter: invert(0%) grayscale(0%) brightness(100%)
+	// 		.header-menu
+	// 			background: $white
+	// 			border-top: none
+	// 		.menu
+	// 			ul.menulink
+	// 				> li
+	// 					> a
+	// 						color: darken($white,40%)
+	// 					&.active
+	// 						> a
+	// 							color: $black

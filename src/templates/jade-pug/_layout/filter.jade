@@ -1,0 +1,128 @@
+section.filter-col.clearfix.wow.fadeInLeft
+	.filter-wrap.category-group.clearfix
+		.filter-group.clearfix
+			.filter-title 
+				span Danh mục
+				//- .btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option.clearfix
+				nav.filter-category.clearfix
+					ul
+						li
+							a(href="#") Hotel - Resort
+						li.active
+							a(href="#") Tour trong nước
+						li
+							a(href="#") Tour nước ngoài 
+						li
+							a(href="#") Tour đoàn
+		.btn-closefilter.btn-close <span class="lnr lnr-cross"></span> Đóng bộ lọc
+	.filter-wrap.option-group.clearfix
+		.filter-group.clearfix
+			.filter-title 
+				span Điểm đến trong nước
+				.btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option.clearfix
+				nav.brand-category
+					ul
+						li
+							a.active(href="#!") Hà Nội
+						li
+							a(href="#!") Hải Phòng
+						li
+							a(href="#!") Hà Giang
+						li
+							a(href="#!") Bắc Ninh
+						li
+							a(href="#!") Hạ Long
+						li
+							a(href="#!") Thanh Hóa
+						li
+							a(href="#!") Thừa Thiên Huế
+						li
+							a(href="#!") Đà Nẵng
+						li
+							a(href="#!") Hội An
+						li
+							a.active(href="#!") Quy Nhơn
+						li
+							a(href="#!") Nha Trang
+						li
+							a(href="#!") Phan Thiết
+						li
+							a.active(href="#!") Hồ Chí Minh
+						li
+							a.active(href="#!") Vũng Tàu
+						li
+							a(href="#!") Tiền Giang
+						li
+							a(href="#!") Cần Thơ
+		//- .filter-group.clearfix
+			.filter-title 
+				span Điểm đến ngoài nước
+				.btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option.clearfix
+				nav.brand-category
+					ul
+						li 
+							a(href="#") Singapore
+						li
+							a.active(href="#") Thailand
+						li 
+							a(href="#") Australia
+						li 
+							a(href="#") Japan
+						li 
+							a(href="#") Taiwan
+						li
+							a.active(href="#") Korea
+		.filter-group.clearfix
+			.filter-title
+				span Tour theo chủ đề
+				.btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option.clearfix
+				nav.brand-category
+					ul
+						li 
+							a(href="#") Đồi núi
+						li
+							a.active(href="#") Bãi biển
+						li 
+							a(href="#") Đảo, quần đảo
+						li 
+							a(href="#") Sông nước
+						li 
+							a(href="#") Danh lam thắng cảnh
+						li
+							a.active(href="#") Resort nghỉ dưỡng
+
+		.filter-group.clearfix
+			.filter-title 
+				span Khoảng giá
+				.btn-reset <i class="fa fa-undo" aria-hidden="true"></i>
+			.filter-option.clearfix
+				.price-select
+					select
+						option -- Lọc khoảng giá --
+						option 0 - 1 triệu
+						option 2 triệu - 3 triệu
+						option 3 triệu - 5 triệu
+						option 5 triệu - 7 triệu
+						option 7 triệu - 10 triệu
+						option 10 triệu - 15 triệu
+			//- .filter-option.clearfix
+				.filter-range
+					#slider-range.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all(aria-disabled='false')
+						.ui-slider-range.ui-widget-header.ui-corner-all(style='left: 0%; width: 100%;')
+						a.ui-slider-handle.ui-state-default.ui-corner-all(href='#', style='left: 0%;')
+						a.ui-slider-handle.ui-state-default.ui-corner-all(href='#', style='left: 100%;')
+					.price-range
+						| Giá từ
+						.sliderValue.min-input(data-index='0') 0
+						| đến
+						.sliderValue.max-input(data-index='1') 10.000.000
+					.hidden
+						a.urlwithoutprice(href='#')
+						a.urlwithprice(href='#')
+						a.pricemin
+						a.pricemax
+		.btn-closefilter.btn-close <span class="lnr lnr-cross"></span> Đóng bộ lọc

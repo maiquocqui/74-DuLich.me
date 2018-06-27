@@ -1,0 +1,68 @@
+.contact-map
+.contact-page
+	margin: 40px 0
+	.contact-form
+	.contact-info
+		padding: 30px
+		+bor-rad(5px)
+		background: darken($white,2%)
+		.sitelogo
+			margin-bottom: 20px
+		.company
+			+fs(15rem)
+			font-weight: 600
+			margin-bottom: 15px
+		ul
+			li
+				+pos(rel,null)
+				padding-left: 20px
+				margin-bottom: 5px
+				color: darken($white,60%)
+				+fs(14rem)
+				line-height: 1.8
+				.fa
+					+pos(abs, 5px null null 0)
+					color: $blue
+				a
+					color: $black
+					&:hover
+						color: $red
+	.contact-form
+		.module-title
+			+fs(24rem)
+			font-weight: 600
+			margin-bottom: 15px
+			&:after
+				content: ''
+				display: inline-block
+				vertical-align: middle
+				width: 40px
+				height: 3px
+				background: $blue
+				margin-left: 20px
+		.form-wrap
+			margin: 0px -10px
+		.form-group
+			padding: 0px 10px
+			input, textarea
+				width: 100%
+				+bor-rad(5px)
+				border: 1px solid darken($white,10%)
+				padding: 10px 20px
+				&:hover, &:active, &:focus
+					border-color: darken($white,40%)
+		.frm-btn
+			padding: 0px 15px
+		input[type="submit"]
+			display: inline-block
+			width: auto
+			background: linear-gradient(to right,lighten($cyan,10%),$blue)
+			color: $white
+			border: none
+			box-shadow: 0 10px 20px -10px $cyan
+			+bor-rad(50px)
+			line-height: 40px
+			padding: 0px 30px
+			font-weight: 600
+			&:hover
+				filter: brightness(110%)

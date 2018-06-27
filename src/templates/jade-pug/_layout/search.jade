@@ -1,0 +1,219 @@
+section#search.search-panel.clearfix
+	.container
+		.searchwrap
+			.row
+				.form-wrap
+					.row
+						.form-group.place
+							label Điểm đến
+							input(type="text" placeholder="")
+						.form-group.date
+							label Ngày đi
+							input#btn-datepick(type="text" placeholder="" name="daterange")
+							//- .dropdown-menu.date-picker
+								.btn-prev <i class="fa fa-chevron-left" aria-hidden="true"></i>
+								.btn-next <i class="fa fa-chevron-right" aria-hidden="true"></i>
+								.month-list
+									.item
+										.month 11/2017
+										table.date-in-month
+											thead
+												tr
+													th Su
+													th Mo
+													th Tu
+													th We
+													th Th
+													th Fr
+													th Sa
+											tbody
+												tr
+													td 
+													td 
+													td 
+													td 01
+													td 02
+													td 03
+													td 04
+												tr
+													td 05
+													td 06
+													td 07
+													td 08
+													td 09
+													td 10
+													td 11
+												tr
+													td 12
+													td 13
+													td 14
+													td 15
+													td 16
+													td 17
+													td 18
+												tr
+													td 19
+													td 20
+													td 21
+													td 22
+													td 23
+													td 24
+													td 25
+												tr
+													td 26
+													td 27
+													td 28
+													td 29
+													td 30
+													td 
+													td 
+									.item
+										.month 12/2017
+										table.date-in-month
+											thead
+												tr
+													th Su
+													th Mo
+													th Tu
+													th We
+													th Th
+													th Fr
+													th Sa
+											tbody
+												tr
+													td 
+													td 
+													td 
+													td 
+													td 
+													td 01
+													td 02
+												tr
+													td 03
+													td 04
+													td 05
+													td 06
+													td 07
+													td 08
+													td 09
+												tr
+													td 10
+													td 11
+													td 12
+													td 13
+													td 14
+													td 15
+													td 16
+												tr
+													td 17
+													td 18
+													td 19
+													td 20
+													td 21
+													td 22
+													td 23
+												tr
+													td 24
+													td 25
+													td 26
+													td 27
+													td 28
+													td 29
+													td 30
+												tr
+													td 31
+													td 
+													td 
+													td 
+													td 
+													td 
+													td 
+									.item
+										.month 01/2018
+										table.date-in-month
+											thead
+												tr
+													th Su
+													th Mo
+													th Tu
+													th We
+													th Th
+													th Fr
+													th Sa
+											tbody
+												tr
+													td 
+													td 01
+													td 02
+													td 03
+													td 04
+													td 05
+													td 06
+												tr
+													td 07
+													td 08
+													td 09
+													td 10
+													td 11
+													td 12
+													td 13
+												tr
+													td 14
+													td 15
+													td 16
+													td 17
+													td 18
+													td 19
+													td 20
+												tr
+													td 21
+													td 22
+													td 23
+													td 24
+													td 25
+													td 26
+													td 27
+												tr
+													td 28
+													td 29
+													td 30
+													td 31
+													td 
+													td 
+													td 
+						.form-group.date
+							label Ngày về
+							input(type="text" placeholder="" name="daterange")
+						//- .form-group.advance
+							label Số người đi
+							input#advance-search(type="text" placeholder="" name="advance")
+							.dropdown-menu.advance-search
+								//- .group
+									label Phòng
+									.input-number
+										.btn-spin.btn-dec -
+										input#phong(type="text" value="0")
+										.btn-spin.btn-inc +
+								.group
+									label Người lớn
+									.input-number
+										.btn-spin.btn-dec -
+										input#nguoilon(type="text" value="0")
+										.btn-spin.btn-inc +
+								.group
+									label Trẻ em
+									.input-number
+										.btn-spin.btn-dec -
+										input#treem(type="text" value="0")
+										.btn-spin.btn-inc +
+								.group
+									label Em bé
+									.input-number
+										.btn-spin.btn-dec -
+										input#embe(type="text" value="0")
+										.btn-spin.btn-inc +
+								.btn-update2 Xác nhận
+				.form-group.frm-btnwrap
+					label &nbsp;
+					.frm-btn
+						button.searchbutton <i class="fa fa-search" aria-hidden="true"></i>Tìm kiếm

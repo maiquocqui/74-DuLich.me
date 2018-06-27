@@ -1,0 +1,815 @@
+.home-title
+	+fs(28rem)
+	font-weight: 500
+	margin-bottom: 30px
+	line-height: 1.5
+	// text-transform: capitalize
+	strong
+		color: $blue
+.page-title
+	+fs(24rem)
+	font-weight: 600
+	margin-bottom: 20px
+.small-title
+	+fs(16rem)
+	font-weight: 500
+	color: $black
+	line-height: 1.5
+	margin-bottom: 15px
+	+pos(rel,null)
+	// text-transform: uppercase
+	&:after
+		content: ''
+		+pos(abs, 50% 0 null 0)
+		+transform(translateY(-50%))
+		height: 2px
+		background: darken($white,10%)
+	span
+		font-weight: 500
+		background: $white
+		padding-right: 10px
+		+pos(rel,null)
+		z-index: 5
+.banner-qc
+	margin: 30px 0 0
+	a
+		display: block
+		+bor-rad(5px)
+		overflow: hidden
+		&.bn-pc
+			+media-breakpoint-down(md)
+				display: none
+		&.bn-mb
+			+media-breakpoint-up(lg)
+				display: none
+	img
+		width: 100%
+
+.home-hotdeal
+	padding: 60px 0
+	background: url(../img/nybg.png) bottom left no-repeat
+	background-size: 60% auto
+	background-position-x: -300px
+	// background: darken($white,3%)
+	.hotdeal-list
+		// .row
+		// 	margin: 0px -10px
+		// .col-12
+		// 	padding: 0px 10px
+	.deal-col
+		display: block
+		+bor-rad(5px)
+		box-shadow: 0px 10px 50px color-rgba($black,0.1)
+		overflow: hidden
+		margin-bottom: 30px
+		+transition(all,0.3s)
+		&:hover
+			box-shadow: 0px 10px 50px color-rgba($black,0.2)
+		&.big
+			figure
+				.deal-img
+					img
+						height: 490px
+				figcaption
+					.deal-name
+						+fs(16rem)
+					.deal-des
+						+fs(14rem)
+						line-height: 1.8
+		&.simi
+			figure
+				.deal-img
+					img
+						height: 490px
+		.intro
+			+bor-rad(5px)
+			background: $white
+			height: 230px
+			padding: 40px
+			+flexbox
+			flex-wrap: wrap
+			align-items: center
+			align-content: center
+			+media-breakpoint-down(md)
+				height: unset
+			.home-title
+				width: 100%
+				// margin-bottom: 10px
+			.des
+				+fs(14rem)
+				color: darken($white,40%)
+		figure
+			+pos(rel,null)
+			.deal-img
+				display: block
+				img
+					width: 100%
+					height: 230px
+					object-fit: cover
+					+transition(all,0.3s)
+			figcaption
+				+pos(abs, null 0 0 0)
+				z-index: 5
+				padding: 10px 15px
+				// background: color-rgba($black,0.5)
+				background: color-rgba($white,0.8)
+				opacity: 1
+				+transition(all,0.3s)
+				// +flexbox
+				// flex-wrap: wrap
+				// align-content: flex-end
+				// align-content: flex-end
+				.deal-name
+					color: $black
+					font-weight: 600
+					+fs(16rem)
+					line-height: 1.3
+					// margin-bottom: 10px
+					// margin-top: 20px
+					opacity: 1
+					+transition(all,0.3s)
+					transition-delay: 0.2s
+					margin-bottom: 5px
+					+media-breakpoint-down(lg)
+						+fs(14rem)
+				time
+					display: block
+					+fs(13rem)
+					color: darken($white,60%)
+					line-height: 1
+					margin-bottom: 5px
+					&:before
+						content: '\f017'
+						margin-right: 10px
+						color: $blue
+				.deal-des
+					+fs(13rem)
+					color: $white
+					opacity: 0.9
+					margin-bottom: 10px
+					+transition(all,0.3s)
+					transition-delay: 0.2s
+					display: none
+				.deal-price
+					opacity: 1
+					+transition(all,0.3s)
+					transition-delay: 0.2s
+					.new
+						+fs(15rem)
+						font-weight: 600
+						// color: lighten($cyan,20%)
+						color: $blue
+						margin-right: 10px
+						display: inline-block
+						+media-breakpoint-down(lg)
+							+fs(13rem)
+					.old
+						+fs(13rem)
+						font-weight: 550
+						color: darken($white,40%)
+						text-decoration: line-through
+						display: inline-block
+						+media-breakpoint-down(lg)
+							+fs(11rem)
+			&:hover
+				.deal-img
+					img
+						+transform(scale3d(1.1,1.1,1))
+				// figcaption
+				// 	opacity: 1
+				// 	.deal-name
+				// 		margin-top: 0
+				// 		opacity: 1
+				// 	.deal-des
+				// 		opacity: 1
+				// 	.deal-price
+				// 		opacity: 1
+
+.home-tour
+	// padding: 60px 0
+	// background-size: 100% auto
+	// background: darken($white,2%)
+	padding: 40px 0
+	&.s2
+		background: $white
+	.btn-viewmore
+		display: inline-block
+		background: linear-gradient(to right,lighten($cyan,10%),$blue)
+		box-shadow: 0px 10px 15px -10px $cyan
+		color: $white
+		line-height: 40px
+		padding: 0px 30px
+		+bor-rad(50px)
+		&:hover
+			filter: brightness(110%)
+	.tour-list
+		margin-bottom: 30px
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			z-index: 5
+			+fs(0)
+			color: $white
+			background: linear-gradient(to right,lighten($cyan,10%),$blue)
+			
+			+bor-rad(50px)
+			width: 36px
+			height: 36px
+			line-height: 36px
+			text-align: center
+			&:before
+				content: ''
+				+fs(28rem)
+			&:hover
+				filter: brightness(110%)
+				box-shadow: 0 10px 20px -10px $cyan
+			&.slick-disabled
+				opacity: 0.2
+		.slick-prev
+			left: -40px
+			padding-right: 2px
+			+media-breakpoint-down(xs)
+				left: 0
+			&:before
+				content: '\f104'
+		.slick-next
+			right: -40px
+			padding-left: 2px
+			+media-breakpoint-down(xs)
+				right: 0
+			&:before
+				content: '\f105'
+		.slick-list
+			margin: 0px -15px
+		.slick-track
+			+flexbox
+		.item
+			padding: 0px 15px
+			height: auto
+	.tour-col
+		display: block
+		height: 100%
+		+bor-rad(5px)
+		background: $white
+		border: 1px solid darken($white,10%)
+		overflow: hidden
+		figure
+			.tour-img
+				+pos(rel,null)
+				overflow: hidden
+				+flexbox
+				max-height: 200px
+				min-height: 200px
+				align-items: center
+				justify-content: center
+				img
+					width: 100%
+					max-height: 200px
+					min-height: 200px
+					object-fit: cover
+					+transition(all,0.3s)
+				.btn-viewdetail
+					+pos(abs, 50% null null 50%)
+					+transform(translateY(-50%)translateX(-50%)scale3d(1.5,1.5,1))
+					opacity: 0
+					z-index: 1
+					background: linear-gradient(to right,lighten($cyan,10%),$blue)
+					box-shadow: 0px 10px 20px -10px $cyan
+					color: $white
+					+bor-rad(50px)
+					+fs(13rem)
+					line-height: 34px
+					padding: 0px 20px
+					+transition(all,0.3s)
+					&:hover
+						filter: brightness(110%)
+			figcaption
+				padding: 20px
+				+bor-rad(0 0 5px 5px)
+				.tour-name
+					height: 1rem*1.5*2
+					font-weight: 500
+					+fs(15rem)
+					line-height: 1.5
+					-webkit-line-clamp: 2
+					-webkit-box-orient: vertical
+					overflow: hidden
+					text-overflow: ellipsis
+					color: $black
+					margin-bottom: 5px
+					+media-breakpoint-down(md)
+						+fs(14rem)
+				.tour-desc
+					+fs(15rem)
+					font-weight: 500
+					line-height: 1.4
+					color: $main
+				.tour-destination
+					+fs(13rem)
+					color: darken($white,60%)
+					line-height: 1.5
+					+media-breakpoint-down(md)
+						+fs(12rem)
+					&:before
+						content: '\f124'
+						margin-right: 10px
+						color: $blue
+				time
+					display: block
+					+fs(13rem)
+					color: darken($white,60%)
+					line-height: 1.5
+					margin-bottom: 5px
+					+media-breakpoint-down(md)
+						+fs(12rem)
+					&:before
+						content: '\f017'
+						margin-right: 10px
+						color: $blue
+				.tour-price
+					.new
+						display: inline-block
+						+fs(16rem)
+						font-weight: 600
+						color: $blue
+						margin-right: 10px
+						+media-breakpoint-down(md)
+							+fs(14rem)
+					.old
+						display: inline-block
+						+fs(13rem)
+						color: darken($white,40%)
+						text-decoration: line-through
+						+media-breakpoint-down(md)
+							+fs(11rem)
+			&:hover
+				.tour-img
+					img
+						filter: brightness(80%)
+						+transform(scale3d(1.1,1.1,1))
+					.btn-viewdetail
+						+transform(translateY(-50%)translateX(-50%)scale3d(1,1,1))
+						opacity: 1
+
+.home-hotel
+	background: linear-gradient(135deg,color-rgba($cyan,0.05), color-rgba($blue,0.05))
+	//  ,url(../img/tour/9.jpg) center center no-repeat
+	background-size: cover
+	padding: 60px 0
+	.home-title
+		// color: $white
+		// &:after
+		// 	content: ''
+		// 	display: block
+		// 	width: 60px
+		// 	height: 1px
+		// 	background: color-rgba($white,0.8)
+		// 	margin: 10px auto 0
+		// strong
+		// 	color: $white
+	.btn-viewmore
+		display: inline-block
+		background: linear-gradient(to right,lighten($cyan,10%),$blue)
+		box-shadow: 0px 10px 15px -10px $cyan
+		color: $white
+		line-height: 40px
+		padding: 0px 30px
+		+bor-rad(50px)
+		&:hover
+			filter: brightness(110%)
+	.hotel-list
+		margin-bottom: 30px
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			z-index: 5
+			+fs(0)
+			color: $white
+			background: linear-gradient(to right,lighten($cyan,10%),$blue)
+			
+			+bor-rad(50px)
+			width: 36px
+			height: 36px
+			line-height: 36px
+			text-align: center
+			&:before
+				content: ''
+				+fs(28rem)
+			&:hover
+				filter: brightness(110%)
+				box-shadow: 0 10px 20px -10px $cyan
+			&.slick-disabled
+				opacity: 0.2
+		.slick-prev
+			left: -50px
+			padding-right: 2px
+			+media-breakpoint-down(md)
+				left: -40px
+			+media-breakpoint-down(xs)
+				left: 0
+			&:before
+				content: '\f104'
+		.slick-next
+			right: -50px
+			padding-left: 2px
+			+media-breakpoint-down(md)
+				right: -40px
+			+media-breakpoint-down(xs)
+				right: 0
+			&:before
+				content: '\f105'
+		.slick-list
+			margin: 0px -15px
+		.slick-track
+			+flexbox
+		.item
+			padding: 0px 15px
+	.hotel-col
+		padding-top: 15px
+		display: block
+		figure
+			+pos(rel,null)
+			+bor-rad(5px)
+			box-shadow: 0px 10px 20px -10px color-rgba($black,0.5)
+			.promotion
+				display: inline-block
+				+fs(13rem)
+				font-weight: 500
+				line-height: 30px
+				padding: 0px 15px
+				+bor-rad(0 50px 50px 0)
+				color: $white
+				+pos(abs, 20px null null 0)
+				// +transform(translateX(-50%))
+				z-index: 10
+				&.sale
+					background: linear-gradient(to right,$orange,$red)
+			.hotel-img
+				overflow: hidden
+				+bor-rad(5px 5px 0 0)
+				+pos(rel,null)
+				// &:before
+				// 	content: ''
+				// 	+pos(abs, 0 null 0 0)
+				// 	right: 0
+				// 	background: linear-gradient(color-rgba($black,0) 75%,color-rgba($black,0.5))
+				img
+					width: 100%
+					height: 300px
+					object-fit: cover
+					+transition(all,0.3s)
+					+media-breakpoint-down(lg)
+						height: 280px
+					+media-breakpoint-down(md)
+						height: 200px
+				.link
+					+pos(abs, 50% null null 50%)
+					+transform(translateY(-50%)translateX(-50%)scale3d(1.5,1.5,1))
+					opacity: 0
+					z-index: 1
+					background: linear-gradient(to right,lighten($cyan,10%),$blue)
+					box-shadow: 0px 10px 20px -10px $cyan
+					color: $white
+					+bor-rad(50px)
+					+fs(13rem)
+					line-height: 34px
+					padding: 0px 20px
+					+transition(all,0.3s)
+					&:hover
+						filter: brightness(110%)
+			figcaption
+				// +pos(abs, null 0 0 0)
+				// right: 0
+				z-index: 5
+				background: $white
+				padding: 10px 20px
+				+bor-rad(0 0 5px 5px)
+				+transition(all,0.3s)
+				+media-breakpoint-down(md)
+					padding: 10px
+				.hotel-name
+					height: 0.875rem*1.3*2
+					font-weight: 500
+					+fs(15rem)
+					line-height: 1.3
+					-webkit-line-clamp: 2
+					-webkit-box-orient: vertical
+					overflow: hidden
+					text-overflow: ellipsis
+					color: $black
+					margin-bottom: 5px
+					+media-breakpoint-down(md)
+						+fs(14rem)
+				.hotel-location
+					+fs(13rem)
+					color: darken($white,60%)
+					opacity: 0.8
+					margin-bottom: 5px
+					+media-breakpoint-down(md)
+						+fs(12rem)
+					&:before
+						content: '\f041'
+						margin-right: 5px
+						color: $blue
+				time
+					display: inline-block
+					+fs(14rem)
+					color: darken($white,40%)
+					opacity: 0.8
+					margin-left: 15px
+					margin-bottom: 10px
+					+media-breakpoint-down(md)
+						+fs(12rem)
+					&:before
+						content: '\f017'
+						margin-right: 5px
+				.hotel-des
+					+fs(13rem)
+					color: $main
+					opacity: 0.8
+					line-height: 1.6
+					margin-bottom: 15px
+					+media-breakpoint-down(md)
+						+fs(12rem)
+				.hotel-price
+					// margin-bottom: 15px
+					.old
+						display: inline-block
+						+fs(13rem)
+						color: darken($white,40%)
+						text-decoration: line-through
+						+media-breakpoint-down(md)
+							+fs(12rem)
+					.new
+						display: inline-block
+						+fs(16rem)
+						font-weight: 600
+						color: $blue
+						margin-right: 5px
+						+media-breakpoint-down(md)
+							+fs(14rem)
+			&:hover
+				.hotel-img
+					img
+						+transform(scale3d(1.1,1.1,1))
+						filter: brightness(80%)
+					.link
+						+transform(translateY(-50%)translateX(-50%)scale3d(1,1,1))
+						opacity: 1
+					
+.home-blog-wrap
+	padding: 60px 0
+	// background: darken($white,2%)
+	&.s2
+		// background: darken($white,2%)
+	.home-title
+		+fs(24rem)
+		font-weight: 600
+		margin-bottom: 15px
+		&:after
+			content: ''
+			display: inline-block
+			vertical-align: middle
+			width: 40px
+			height: 3px
+			background: linear-gradient(to right,lighten($cyan,10%),$blue)
+			margin-left: 20px
+.home-food
+	.food-list
+		.row
+			// margin: 0px -5px
+		.col-12
+			// padding: 0px 5px
+		.col-md-5
+			border-left: 1px solid darken($white,5%)
+		.food-col
+			display: block
+			margin-bottom: 10px
+			padding-bottom: 10px
+			border-bottom: 1px dashed darken($white,10%)
+			background: $white
+			// +bor-rad(5px)
+			// box-shadow: 0px 10px 50px color-rgba($black,0.05)
+			// padding: 10px
+			figure
+				+flexbox
+				flex-wrap: wrap
+				.food-img
+					width: 70px
+					img
+						width: 100%
+						height: 60px
+						object-fit: cover
+				figcaption
+					width: calc(100% - 70px)
+					padding-left: 15px
+					.food-name
+						color: $black
+						+fs(14rem)
+						line-height: 1.3
+						margin-bottom: 3px
+					.food-location
+						+fs(12rem)
+						color: darken($white,60%)
+						&:before
+							content: '\f041'
+							margin-right: 5px
+							color: $blue
+				&:hover
+					figcaption
+						.food-name
+							color: $blue
+			&.big
+				border-bottom: none
+				padding-bottom: 0
+				margin-bottom: 0
+				figure
+					.food-img
+						width: 100%
+						img
+							height: auto
+					figcaption
+						width: 100%
+						padding: 15px 0
+						.food-name
+							+fs(16rem)
+							font-weight: 500
+							margin-bottom: 3px
+						.food-location
+							margin-bottom: 5px
+						.food-des
+							+fs(13rem)
+							line-height: 1.5
+							color: darken($white,60%)
+.home-video
+	.video-list
+	.video
+		display: block
+		padding-bottom: 10px
+		margin-bottom: 10px
+		border-bottom: 1px dashed darken($white,10%)
+		figure
+			+flexbox
+			.video-img
+				width: 80px
+				+pos(rel,null)
+				img
+					height: 55px
+					object-fit: cover
+				&:before
+					content: '\f04b'
+					+pos(abs, 0 null 0 0)
+					right: 0
+					+flexbox
+					justify-content: center
+					align-items: center
+					color: $white
+					+fs(16rem)
+					background: color-rgba($black,0.2)
+			figcaption
+				width: calc(100% - 80px)
+				padding-left: 10px
+				.video-name
+					color: $main
+					+fs(13rem)
+					line-height: 1.3
+			&:hover
+				figcaption
+					.video-name
+						color: $blue
+
+		&.big
+			margin-bottom: 10px
+			+media-breakpoint-down(lg)
+				float: left
+				width: 50%
+				margin-right: 30px
+			+media-breakpoint-down(sm)
+				width: 100%
+				float: none
+				margin-right: 0
+			figure
+				+pos(rel,null)
+				+flexbox
+				flex-wrap: wrap
+				.video-img
+					width: 100%
+					+pos(rel,null)
+					&:before
+						+fs(28rem)
+						background: color-rgba($black,0.5)
+					img
+						width: 100%
+						height: unset
+				figcaption
+					width: 100%
+					padding: 0
+					.video-name
+						+pos(abs, null 10px 10px 10px)
+						+fs(13rem)
+						line-height: 1.3
+						// font-weight: 500
+						color: $white
+.home-blog
+	background: darken($white,2%)
+	padding: 60px 0px 0
+	&.s2
+		background: $white
+	.col-12
+		margin-bottom: 30px
+	.blog-list
+		// margin-bottom: 30px
+		.slick-prev, .slick-next
+			+pos(abs, 50% null null null)
+			+transform(translateY(-50%))
+			z-index: 5
+			+fs(0)
+			color: $white
+			background: linear-gradient(to right,lighten($cyan,10%),$blue)
+			+bor-rad(50px)
+			width: 36px
+			height: 36px
+			line-height: 36px
+			text-align: center
+			&:before
+				content: ''
+				+fs(28rem)
+			&:hover
+				filter: brightness(110%)
+				box-shadow: 0 10px 20px -10px $cyan
+			&.slick-disabled
+				opacity: 0.2
+		.slick-prev
+			left: -40px
+			padding-right: 2px
+			+media-breakpoint-down(xs)
+				left: 0
+			&:before
+				content: '\f104'
+		.slick-next
+			right: -40px
+			padding-left: 2px
+			+media-breakpoint-down(xs)
+				right: 0
+			&:before
+				content: '\f105'
+		.slick-list
+			margin: 0px -15px
+		.slick-track
+			+flexbox
+		.item
+			padding: 0px 15px 30px
+			height: auto
+		.blog-col
+			display: block
+			background: $white
+			+bor-rad(5px)
+			overflow: hidden
+			height: 100%
+			+transition(all,0.3s)
+			box-shadow: 0px 10px 20px -10px color-rgba($black,0.05)
+			margin-bottom: 0
+			&:hover
+				box-shadow: 0px 10px 20px -10px color-rgba($black,0.1)
+			figure
+				.blog-img
+					+bor-rad(0)
+					img
+						+bor-rad(0)
+				figcaption
+					padding: 20px
+					.blog-name
+						+fs(15rem)
+						margin-bottom: 3px
+						line-height: 1.3
+						color: $black
+					time
+						background: none
+						color: darken($white,40%)
+						box-shadow: none
+						margin: 0 0 10px
+						padding: 0
+						+fs(13rem)
+						&:before
+							content: '\f133'
+							margin-right: 5px
+							color: $blue
+					.blog-des
+						margin-bottom: 0
+						color: darken($white,60%)
+						display: -webkit-box
+						height: 0.8125rem*1.5*3
+						-webkit-line-clamp: 3
+						-webkit-box-orient: vertical
+						overflow: hidden
+						text-overflow: ellipsis
+	.btn-viewmore
+		display: inline-block
+		background: linear-gradient(to right,lighten($cyan,10%),$blue)
+		box-shadow: 0px 10px 20px -10px $cyan
+		color: $white
+		line-height: 40px
+		padding: 0px 30px
+		+bor-rad(50px)
+		&:hover
+			filter: brightness(110%)

@@ -1,0 +1,72 @@
+header
+	section.header-top.clearfix
+		.container
+			.social
+				label Theo dõi chúng tôi
+				nav.social-list
+					a(href="#!") <i class="fa fa-facebook" aria-hidden="true"></i>
+					a(href="#!") <i class="fa fa-twitter" aria-hidden="true"></i>
+					a(href="#!") <i class="fa fa-google-plus" aria-hidden="true"></i>
+					a(href="#!") <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+					a(href="#!") <i class="fa fa-instagram" aria-hidden="true"></i>
+			.colright.clearfix
+				.language
+					.dropdown
+						a.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+							| Tiếng Việt
+						.dropdown-menu(aria-labelledby='dropdownMenuLink')
+							a.dropdown-item.active(href='#') Tiếng việt
+							a.dropdown-item(href='#') English
+				.login
+					.dropdown
+						a.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+							| Đăng nhập
+						.dropdown-menu.login-menu(aria-labelledby='dropdownMenuLink')
+							ul
+								li 
+									a.btn-login(href="#") Đăng nhập
+								li 
+									a.btn-login(href="#") Tạo tài khoản
+								li 
+									a.btn-login.google(href="#") <i class="fa fa-google-plus" aria-hidden="true"></i>Đăng nhấp bằng Google
+								li 
+									a.btn-login.facebook(href="#") <i class="fa fa-facebook" aria-hidden="true"></i>Đăng nhấp bằng Facebook
+	
+	.container
+		section.header-menu.clearfix
+			.sitelogo
+				a(href="index.html")
+					img(src="img/logo.png", alt="")
+			.colright.clearfix
+				nav.menu
+					.menu-logo.d-xl-none
+						.sitelogo
+							a(href="index.html")
+								img(src="img/logo.png", alt="")
+					.menu-content.clearfix
+						.menu-wrap.clearfix
+							ul.menulink.clearfix
+								li.active
+									a(href="index.html") Trang chủ
+								li.hassub
+									a(href="#") Du lịch
+									.btn-showsub.d-xl-none <i class="fa fa-angle-down" aria-hidden="true"></i>
+									.sub
+										ul
+											li
+												a(href="#") Du lịch trong nước
+											li
+												a(href="#") Du lịch nước ngoài
+								li
+									a(href="#") Ẩm thực
+								li
+									a(href="#") Khách sạn
+								li
+									a(href="blog.html") Cẩm nang du lịch
+								li
+									a(href="video.html") Video
+								li
+									a(href="lienhe.html") Liên hệ
+						//- .cart.clearfix
+							.cart-toggle <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+								.cart-amount 2

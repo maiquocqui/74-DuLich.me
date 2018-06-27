@@ -1,0 +1,636 @@
+.news-detail-page, .product-detail-page
+	.breadcrumb-wrap
+		.breadcrumb-banner
+			display: none
+	
+
+.blog-page
+	margin: 40px 0
+	.share
+		margin-bottom: 30px
+.blog-list
+	.blog-col
+		margin-bottom: 20px
+		figure
+			.blog-img
+				//display: block
+				+flexbox
+				+bor-rad(5px)
+				overflow: hidden
+				min-height: 200px
+				max-height: 200px
+				align-items: center
+				justify-content: center
+				img
+					width: 100%
+					+bor-rad(5px)
+					min-height: 200px
+					max-height: 200px
+					object-fit: cover
+			figcaption
+				// text-align: center
+				padding: 10px 0
+				time
+					display: inline-block
+					+bor-rad(50px)
+					background: linear-gradient(to right,lighten($cyan,10%),$blue)
+					+fs(11rem)
+					// font-weight: 600
+					color: $white
+					padding: 3px 15px
+					box-shadow: 0px 5px 10px -5px $blue
+					margin-bottom: 10px
+				.blog-name
+					+fs(16rem)
+					font-weight: 500
+					line-height: 1.4
+					margin-bottom: 10px
+					a
+						color: $black
+				.blog-des
+					+fs(13rem)
+					color: darken($white,40%)
+					margin-bottom: 10px
+				.link
+					+fs(13rem)
+					color: $black
+					&:after
+						content: '\f105'
+						margin-left: 5px
+					&:hover
+						color: $red
+			&:hover
+				figcaption
+					.blog-name
+						a
+							color: $blue
+					.link
+						color: $red
+	&.video-list
+		.blog-col
+			figure
+				.blog-img
+					+pos(rel,null)
+					overflow: hidden
+					&:before
+						content: '\f04b'
+						+pos(abs, 0 null 0 0)
+						right: 0
+						background: color-rgba($black,0.3)
+						+fs(36rem)
+						color: $white
+						+flexbox
+						justify-content: center
+						align-items: center
+						z-index: 5
+						+transition(all,0.5s)
+					img
+				figcaption
+					.blog-des
+					.blog-cate
+						display: inline-block
+						margin-right: 20px
+						color: $main
+						+fs(14rem)
+						font-weight: 500
+						&:before
+							content: '\f03d'
+							margin-right: 5px
+							color: $blue
+					time
+						display: inline-block
+						margin: 0
+						padding: 0
+						background: none
+						box-shadow: none
+						+fs(13rem)
+						color: $main
+						font-weight: 500
+						&:before
+							content: '\f017'
+							margin-right: 5px
+							color: $blue
+				&:hover
+					.blog-img
+						&:before
+							background: linear-gradient(to right,color-rgba(lighten($cyan,10%),0.5),color-rgba($blue,0.5))
+						img
+							+transform(scale3d(1.2,1.2,1))
+							+transition(all,5s)
+
+.blog-list2
+	// margin-bottom: 60px
+	.blog-col
+		margin-bottom: 30px
+		figure
+			+flexbox
+			flex-wrap: wrap
+			+bor-rad(5px)
+			overflow: hidden
+			border: 1px solid darken($white,5%)
+			+transition(all,0.5s)
+			box-shadow: 0px 5px 20px 0px color-rgba($black,0.05)
+			.blog-img
+				display: block
+				width: 40%
+				overflow: hidden
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+					+transition(all,0.5s)
+			figcaption
+				width: 60%
+				padding: 20px 30px
+				time
+					display: inline-block
+					+bor-rad(5px)
+					background: linear-gradient(to right,lighten($cyan,10%),$blue)
+					+fs(11rem)
+					font-weight: 600
+					letter-spacing: 1px
+					color: $white
+					padding: 3px 15px
+					// box-shadow: 0px 5px 10px -5px $blue
+					margin-bottom: 15px
+				.blog-name
+					margin-bottom: 15px
+					a
+						display: block
+						color: $black
+						+fs(18rem)
+						line-height: 1.5
+						font-weight: 600
+						display: -webkit-box
+						height: 1.125rem*1.5*2
+						-webkit-line-clamp: 2
+						-webkit-box-orient: vertical
+						overflow: hidden
+						text-overflow: ellipsis
+						&:hover
+							color: $blue
+				.blog-des
+					+fs(13rem)
+					color: darken($white,60%)
+					margin-bottom: 30px
+					display: -webkit-box
+					height: 0.8125rem*1.5*4
+					-webkit-line-clamp: 4
+					-webkit-box-orient: vertical
+					overflow: hidden
+					text-overflow: ellipsis
+				.link
+					+fs(0rem)
+					color: $black
+					&:hover
+						color: $blue
+					&:after
+						content: '\f064'
+						// margin-left: 10px
+						+fs(18rem)
+			&:hover
+				box-shadow: 0px 5px 20px 0px color-rgba($black,0.1)
+				.blog-img
+					img
+						+transform(scale3d(1.2,1.2,1))
+.pages
+	margin: -30px 0 40px
+	ul.pagination
+		margin: 0
+		padding: 0
+		li
+			display: inline-block
+			+ li
+				margin-left: 10px
+			a, span
+				display: block
+				width: 34px
+				height: 34px
+				line-height: 34px
+				text-align: center
+				+bor-rad(50px)
+				+fs(14rem)
+				color: $main
+				background: color-rgba($black,0.03)
+			&:hover
+				a, span
+					color: $blue
+			&.active
+				a, span
+					background: linear-gradient(to right,lighten($cyan,20%),$blue)
+					box-shadow: 0 10px 20px -10px $blue
+					color: $white
+					font-weight: 500
+
+.blog-category
+	margin: 40px 0
+	ul
+		li
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+			a
+				display: block
+				+pos(rel,null)
+				+bor-rad(5px)
+				overflow: hidden
+				color: $white
+				+fs(13rem)
+				text-transform: uppercase
+				text-align: center
+				padding: 20px 0
+				.img
+					+pos(abs, 0 null 0 0)
+					right: 0
+					&:after
+						content: ''
+						+pos(abs, 0 null 0 0)
+						right: 0
+						z-index: 1
+						background: linear-gradient(to right, color-rgba($black,0.3),color-rgba($black,0.5))
+						+transition(all,0,3s)
+					img
+						width: 100%
+						height: 100%
+						object-fit: cover
+				.text
+					+pos(rel,null)
+					z-index: 5
+					// font-weight: 500
+					text-shadow: 0 3px 5px color-rgba($black,0.5)
+			&:hover
+				a
+					.img
+						&:after
+							background: linear-gradient(to right, color-rgba($black,0.1),color-rgba($black,0.2))
+			&.active
+				a
+					.img
+						&:after
+							background: linear-gradient(to right, color-rgba($blue,0.2),color-rgba($cyan,1))
+
+.sidebar-title
+	text-align: center
+	+pos(rel,null)
+	margin-bottom: 15px
+	color: $black
+	&:after
+		content: ''
+		+pos(abs, 50% 0 null 0)
+		height: 2px
+		background: color-rgba($black,0.1)
+	span
+		display: inline-block
+		+pos(rel,null)
+		z-index: 1
+		background: $white
+		text-transform: uppercase
+		font-weight: 500
+		+fs(14rem)
+		padding: 0px 10px
+.blog-popular
+	margin: 40px 0
+	.post-list
+		.post
+			margin-bottom: 15px
+			&:first-child
+				figure
+					+pos(rel,null)
+					+bor-rad(5px)
+					overflow: hidden
+					.post-img
+						width: 100%
+						height: 180px
+						+pos(rel,null)
+						&:after
+							content: ''
+							+pos(abs, 0 null 0 0)
+							right: 0
+							background: linear-gradient(color-rgba($black,0.1),color-rgba($black,0.5))
+							+transition(all,0.3s)
+						img
+					figcaption
+						+pos(abs, null 0px 0px 0px)
+						z-index: 1
+						padding: 10px
+						width: 100%
+						.post-name
+							text-shadow: 0 3px 5px color-rgba($black,0.1)
+							a
+								color: $white
+						time
+							color: color-rgba($white,0.8)
+					&:hover
+						.post-img
+							&:after
+								opacity: 0.5
+						figcaption
+							.post-name
+								a
+									color: $white
+			figure
+				+flexbox
+				.post-img
+					display: block
+					width: 80px
+					height: 60px
+					img
+						width: 100%
+						height: 100%
+						object-fit: cover
+						+bor-rad(5px)
+				figcaption
+					width: calc(100% - 80px)
+					padding-left: 10px
+					.post-name
+						display: block
+						a
+							display: block
+							color: $black
+							+fs(13rem)
+							height: 0.8125rem*1.3*2
+							line-height: 1.3
+							width: 100%
+							font-weight: 500
+							-webkit-line-clamp: 2
+							-webkit-box-orient: vertical
+							overflow: hidden
+							text-overflow: ellipsis
+							margin-bottom: 5px
+					time
+						display: block
+						+fs(11rem)
+						line-height: 1
+						color: darken($white,40%)
+						&:before
+							content: '\f017'
+							margin-right: 5px
+							color: $blue
+				&:hover
+					figcaption
+						.post-name
+							a
+								color: $blue
+		&.video-list
+			.post
+				figure
+					.post-img
+						+pos(rel,null)
+						&:before
+							content: "\f04b"
+							+pos(abs,0 null 0 0)
+							color: $white
+							+fs(18rem)
+							// z-index: 5
+							right: 0
+							+flexbox
+							justify-content: center
+							align-items: center
+							background: color-rgba($black,0.3)
+							+bor-rad(5px)
+						&:after
+							display: none
+					figcaption
+						background: none
+.sidebar-insta
+	.insta-user
+		margin-bottom: 10px
+		figure
+			+flexbox
+			.img
+				width: 60px
+				height: 60px
+				+bor-rad(50px)
+				overflow: hidden
+				img
+					width: 100%
+					height: auto
+			figcaption
+				width: calc(100% - 60px)
+				+flexbox
+				justify-content: center
+				align-items: center
+				align-content: center
+				padding-left: 10px
+				flex-wrap: wrap
+				.name
+					font-weight: 500
+					width: 100%
+					+fs(14rem)
+					a
+						color: $black
+						&:hover
+							color: $red
+				.des
+					+fs(11rem)
+					line-height: 1.3
+					color: darken($white,40%)
+	.insta-picture
+		+flexbox
+		flex-wrap: wrap
+		margin: 0px -2px
+		.pic
+			width: 33.33%
+			padding: 0px 2px
+			margin-bottom: 4px
+			a
+				display: block
+				filter: brightness(80%)
+				&:hover
+					filter: brightness(100%)
+				img
+					display: block
+					width: 100%
+	.btn-follow
+		display: block
+		+bor-rad(50px)
+		border: 1px solid $gray
+		text-align: center
+		+fs(13rem)
+		padding: 5px 10px
+		margin-top: 10px
+		color: $black
+		&:hover
+			background: $gray
+			border-color: $gray
+			color: $white
+		&:before
+			content: '\f16d'
+			margin-right: 5px
+
+.blog-banner
+	+pos(rel,null)
+	overflow: hidden
+	&:before
+		content: ''
+		+pos(abs, 0 null 0 0)
+		right: 0
+		height: 40px
+		z-index: 1
+		background: linear-gradient(color-rgba($black,0.5), color-rgba($black,0))
+	.img
+		+pos(abs, 0 null 0 0)
+		right: 0
+		+flexbox
+		align-items: center
+		// filter: brightness(70%)
+		&:before
+			content: ''
+			+pos(abs, 0 null 0 0)
+			right: 0
+			background: linear-gradient(color-rgba($black,0),color-rgba($black,0.5))
+		img
+			width: 100%
+			+media-breakpoint-down(lg)
+				height: 100%
+				object-fit: cover
+			
+			
+	.blog-name
+		+pos(rel,null)
+		z-index: 5
+		margin-top: 400px
+		+fs(32rem)
+		font-weight: 600
+		color: $white
+		text-shadow: 0 5px 10px color-rgba($black,0.2)
+		line-height: 1.5
+		+media-breakpoint-down(lg)
+			margin-top: 200px
+			+fs(24rem)
+			line-height: 1.3
+			margin-bottom: 5px
+		+media-breakpoint-down(sm)
+			margin-top: 100px
+			+fs(18rem)
+	time
+		+pos(rel,null)
+		z-index: 5
+		color: $white
+		+fs(14rem)
+		display: block
+		margin-bottom: 30px
+		text-shadow: 0 5px 10px color-rgba($black,0.2)
+		&:before
+			content: '\f017'
+			margin-right: 5px
+.content
+	+ .share
+		margin-top: 20px
+
+
+.booking-form
+	padding: 30px
+	display: none
+	background: $white
+	max-width: 700px
+	+bor-rad(10px)
+	.form-title
+		+fs(14rem)
+		font-weight: 500
+		color: $black
+		margin-bottom: 3px
+	.form-group
+		+flexbox
+		// align-items: center
+		// align-content: center
+		margin-bottom: 10px
+		label
+			width: 100px
+			padding-top: 3px
+		input[type="text"], textarea
+			width: calc(100% - 100px)
+			//width: 100%
+			+bor-rad(3px)
+			border: 1px solid darken($white,10%)
+			background: none
+			padding: 8px 15px
+			&.date
+				+pos(rel,null)
+				&:after
+					content: '\f133'
+					+pos(abs, 5px 10px null null)
+					color: darken($white,40%)	
+	.form-group.frm-btnwrap
+		label
+			display: none
+		.frm-btn
+			width: 100%
+			text-align: center
+	input[type="submit"]
+		display: inline-block
+		padding: 0px 20px
+		line-height: 32px
+		+mainbutton
+		border: none
+	input[type="reset"]
+		display: none
+	.popup-title
+		label
+			+fs(16rem)
+			font-weight: 500
+			color: $blue
+			margin-bottom: 10px
+			width: 100%
+		input[type="text"]
+			display: none
+.RadCalendarPopup
+	z-index: 999999999!important
+.block-newsTags
+	.tags-head
+		line-height: 1.4
+		margin-bottom: 15px
+		strong
+			+fs(16rem)
+			font-weight: 600
+		span
+			+fs(15rem)
+			font-weight: 500
+			color: $blue
+			font-style: italic
+			+pos(rel,null)
+			+ span
+				&:before
+					content: ','
+	.news-tags
+		margin-bottom: 30px
+	.hr
+		padding-top: 15px
+		margin-bottom: 15px
+		border-bottom: 1px solid darken($white, 15%)
+	.item-tags
+		figure
+			> a
+				display: block
+				margin-bottom: 15px
+				img
+					width: 100%
+			figcaption
+				.tags-title
+					+fs(15rem)
+					font-weight: 400
+					line-height: 1.4
+					margin-bottom: 15px
+					a
+						color: $main
+						&:hover
+							color: $blue
+	.tags-li
+		.tags-title
+			+fs(15rem)
+			font-weight: 400
+			line-height: 1.4
+			margin-bottom: 10px
+			+pos(rel,null)
+			padding-left: 15px
+			&:before
+				content: ''
+				+pos(abs, 7px null null 0)
+				width: 5px
+				height: 5px
+				+bor-rad(50%)
+				background-color: darken($white, 40%)
+			a
+				color: $main
+				&:hover
+					color: $blue

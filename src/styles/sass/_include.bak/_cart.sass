@@ -1,0 +1,1561 @@
+// COLOR
+.bar-notification
+	.close
+		display: none
+
+.cartpage
+	header, footer .footertop
+		display: none
+
+// CART PAGE
+
+.carttitle
+	+fs(16rem)
+	color: $black
+	font-weight: 700
+	line-height: 40px
+	margin-bottom: 10px
+	+pos(rel,null)
+	padding-left: 30px
+	// border-bottom: 1px solid $green
+	+media-breakpoint-down(xs)
+		+fs(14rem)
+	strong
+		color: $pink
+	&:before 
+		color: $pink
+		+fs(18rem)
+		width: 30px
+		line-height: 40px
+		margin-right: 5px
+		text-align: left
+		+pos(abs, 0 null null 0)
+.cart-page
+	background: $white
+	margin-bottom: 30px
+	// border: 1px solid darken($white,10%)
+	// +bor-rad(5px)
+	padding: 0 10px
+	overflow: hidden
+	+media-breakpoint-down(md)
+		margin-bottom: 20px
+	.row
+		margin: 0
+	label.error
+		+pos(abs, null 10px 10px null)
+		+fs(0)
+		line-height: 1
+		&:before
+			content: '\f071'
+			font-family: 'fontawesome'
+			+fs(16rem)
+			color: $red
+	.carttitle
+		&:before
+			content: '\f07a'
+			font-family: 'fontawesome'
+			margin-right: 5px
+			font-weight: normal
+	.cartnotice
+		margin: 0 0 10px
+		+bor-rad(5px)
+		border: 1px solid lighten($green,30%)
+		background: lighten($green,40%)
+		color: $main
+		padding: 10px 30px 10px 15px
+		+pos(rel,null)
+		+fs(14rem)
+		a 
+			color: $green
+			&:hover
+				color: $green
+	.removenotice
+		+pos(abs, 7px 15px null null)
+		cursor: pointer
+		+fs(16rem)
+		color: $green
+		&:before
+			content: '\f057'
+			font-family: 'fontawesome'
+		&:hover
+			color: lighten($green, 20%)
+	.carttable
+		width: 100%
+		margin: 0
+		overflow: hidden
+		// border: 1px solid darken($white,10%)
+		// +bor-rad(5px)
+		margin-bottom: 10px
+		+media-breakpoint-down(xs)
+			width: 100%
+			border-left: none
+			border-right: none
+			margin: 0
+			+bor-rad(0)
+		tr 
+			+media-breakpoint-down(sm)
+				display: block
+				border-bottom: 1px solid darken($white,10%)
+				padding: 10px 0
+				&:after
+					content: ''
+					display: table
+					width: 100%
+					height: 0
+					clear: both
+		thead
+			+media-breakpoint-down(sm)
+				display: none
+		th 
+			background: $green
+			color: $main
+			font-weight: normal
+			padding: 7px 15px
+			// text-transform: uppercase
+			+fs(15rem)
+			font-weight: 700
+			vertical-align: middle
+			border-bottom: 1px solid $green
+			+media-breakpoint-down(sm)
+				display: none
+		td 
+			border-bottom: 1px solid darken($white,10%)
+			padding: 10px
+			+media-breakpoint-down(sm)
+				display: block
+				float: left
+				width: 100%
+				border: none
+				padding: 0
+		th, td
+			text-align: center
+			&:first-child
+				text-align: left
+				width: 350px
+				+media-breakpoint-down(sm)
+					width: 100%
+			&:last-child
+				text-align: right
+		.product
+			+media-breakpoint-down(sm)
+				width: 50%
+			+media-breakpoint-down(xs)
+				width: 100%
+			.productimg
+				display: block
+				width: 80px
+				height: 80px
+				float: left
+				// border: 1px solid darken($white,10%)
+				+media-breakpoint-down(sm)
+					width: 90px
+					height: 90px
+				img 
+					max-width: 90%
+					max-height: 90%
+			.productdetail
+				float: left
+				padding: 3px 10px
+				width: calc(100% - 80px)
+				+media-breakpoint-down(sm)
+					width: calc(100% - 90px)
+				.productname
+					+fs(15rem)
+					font-weight: bold
+					margin-bottom: 5px
+					a 
+						color: $main
+						&:hover
+							color: $green
+				.productsize
+					+fs(14rem)
+					color: darken($white,60%)
+					margin-bottom: 5px
+					select 
+						display: inline-block
+						vertical-align: middle
+						padding: 3px 10px
+						+bor-rad(3px)
+						border: 1px solid darken($white,20%)
+				.productcolor
+					display: flex
+					flex-wrap: wrap
+					justify-content: flex-start
+					.color
+						margin-right: 5px
+						margin-bottom: 5px
+						a
+							display: block
+							border: 1px solid darken($white,20%)
+							padding: 3px
+							background: darken($white,3%)
+							// +bor-rad(3px)
+						.color-img
+							width: 16px
+							height: 16px
+							img
+								border: 2px solid darken($white,20%)
+						a
+							&.active
+								border-color: $orange
+				.removeproduct
+					color: $pink
+					+fs(13rem)
+					&:hover
+						color: $pink
+					&:before
+						content: '\f014'
+						font-family: 'fontawesome'
+						margin-right: 5px
+						color: $pink
+		.price
+			// width: 130px
+			white-space: nowrap
+			+fs(14rem)
+			+media-breakpoint-down(sm)
+				width: 50%
+				text-align: right
+			+media-breakpoint-down(xs)
+				width: 100%
+				margin-top: 10px
+				text-align: left
+			.new
+				font-weight: bold
+				color: $black
+				+media-breakpoint-down(xs)
+					display: inline-block
+			.old
+				color: darken($white,40%)
+				text-decoration: line-through
+				+fs(12rem)
+				+media-breakpoint-down(xs)
+					display: inline-block
+					margin-left: 10px
+			.sale
+				color: $pink
+				+media-breakpoint-down(xs)
+					display: inline-block
+					margin-left: 10px
+		.amount
+			// width: 130px
+			+media-breakpoint-down(sm)
+				width: auto
+				text-align: right
+				clear: left
+				margin-top: 10px
+			.input-number
+				display: inline-block
+		.total
+			// width: 130px
+			+fs(18rem)
+			line-height: 30px
+			font-weight: bold
+			color: $pink
+			+media-breakpoint-down(sm)
+				width: auto
+				float: right
+				clear: right
+				margin-top: 10px
+			+media-breakpoint-down(xs)
+				+fs(16rem)
+	.totalamount
+		text-align: right
+		// padding: 0 20px
+		+fs(14rem)
+		strong 
+			color: $pink
+			+fs(24rem)
+		+media-breakpoint-down(xs)
+			margin-top: 10px
+			+fs(13rem)
+			strong 
+				+fs(18rem)
+	.payment-des
+		text-align: right
+		font-style: italic
+		// padding: 0 20px
+		margin-bottom: 15px
+		+fs(13rem)
+		color: darken($white,40%)
+		+media-breakpoint-down(xs)
+			+fs(12rem)
+.btn-back
+	display: block
+	background: darken($white,20%)
+	color: $main
+	+fs(14rem)
+	line-height: 36px
+	padding: 0px 20px
+	float: left
+	font-weight: 600
+	margin-bottom: 20px
+	text-align: center
+	+media-breakpoint-down(xs)
+		// width: 100%
+		// margin-bottom: 10px
+	&:hover
+		background: darken($white,60%)
+		color: $white
+	&:before
+		content: '\f177'
+		font-family: 'fontawesome'
+		margin-right: 15px
+.btn-continue
+	display: block
+	background: $green
+	overflow: hidden
+	color: $black
+	line-height: 36px
+	padding: 0px 20px
+	float: right
+	font-weight: 600
+	margin: 0
+	margin-bottom: 20px
+	text-align: center
+	cursor: pointer
+	+media-breakpoint-down(xs)
+		// width: 100%
+	&:hover
+		color: $black
+	&:after
+		content: '\f178'
+		font-family: 'fontawesome'
+		margin-left: 15px
+	&:before
+		background: color-rgba($white,0.2)
+
+.input-number
+	+pos(rel,null)
+	width: 100px
+	// background: $pink
+	border: 1px solid darken($white,10%)
+	.btn-spin
+		+pos(abs,0 null null null)
+		width: 30px
+		height: 30px
+		line-height: 30px
+		text-align: center
+		cursor: pointer
+		color: $main
+		+fs(18rem)
+		font-weight: 700
+		// background: color-rgba($black,0.05)
+		&.btn-dec
+			left: 0
+		&.btn-inc
+			right: 0
+		&:hover
+			background: color-rgba($black,0.1)
+	input
+		width: 100%
+		// +bor-rad(5px)
+		+bor-rad(0)
+		background: none
+		+fs(17rem)
+		font-weight: 700
+		color: $pink !important
+		border: none !important
+		padding: 0 !important
+		text-align: center
+		line-height: 30px
+		height: 30px
+.cartpage
+	.nopadding
+		background: $white
+		+ .nopadding
+			border-left: 1px solid darken($white,10%)
+			+media-breakpoint-down(md)
+				border-left: none
+
+.select-group, .radio-button, .gender-select
+	margin-bottom: 10px
+	input[type="radio"]
+		display: none
+		+ label
+			padding: 5px 0 5px 20px
+			+pos(rel,null)
+			color: darken($white,60%)
+			+transition(all,0.3s)
+			+fs(14rem)
+			+media-breakpoint-down(xs)
+				padding: 0px 0 0 20px
+			&:hover
+				color: $green
+			&:before
+				content: ''
+				display: block
+				width: 14px
+				height: 14px
+				+bor-rad(50px)
+				+pos(abs, 7px null null 0)
+				border: 1px solid darken($white,40%)
+				+media-breakpoint-down(xs)
+					top: 3px
+			&:after
+				content: ''
+				display: block
+				width: 14px
+				height: 14px
+				border: 4px solid $pink
+				+pos(abs, 7px null null 0)
+				+bor-rad(50px)
+				opacity: 0
+				+transition(all,0.3s)
+				+media-breakpoint-down(xs)
+					top: 3px
+		&:checked
+			+ label
+				color: $main
+				&:after
+					opacity: 1
+
+.check-group, .checkbox-button
+	margin-bottom: 10px
+	input
+		display: none
+		+ label
+			color: $main
+			padding-left: 25px
+			+pos(rel,null)
+			text-transform: none
+			&:hover
+				color: $black
+			&:before
+				content: ''
+				display: block
+				width: 16px
+				height: 16px
+				// +bor-rad(3px)
+				border: 1px solid darken($white,20%)
+				+pos(abs, 1px null null 0)
+			&:after
+				content: '\f00c'
+				font-family: 'fontawesome'
+				display: block
+				width: 16px
+				height: 16px
+				line-height: 14px
+				text-align: center
+				// +bor-rad(3px)
+				color: $pink
+				border: 1px solid darken($white,20%)
+				+pos(abs, 1px null null 0)
+				z-index: 1
+				+transition(all,0.5s)
+				opacity: 0
+		&:checked
+			+ label
+				&:after
+					opacity: 1
+
+// CART LOGIN
+.cart-login
+	// border: 1px solid darken($white,10%)
+	background: $white
+	padding: 30px 0
+	// margin-bottom: 50px
+	overflow: hidden
+	+media-breakpoint-down(md)
+	+media-breakpoint-down(xs)
+		padding: 15px
+		+fs(13rem)
+	.login-form
+		width: 400px
+		margin: 0 auto
+		+media-breakpoint-down(xs)
+			width: 100%
+		.module-title
+			+fs(14rem)
+			font-weight: 700
+			margin-bottom: 10px
+			+media-breakpoint-down(xs)
+				margin-bottom: 10px
+		.form-group
+			margin-bottom: 10px
+			+media-breakpoint-down(xs)
+				margin-bottom: 10px
+		.select-group
+			+media-breakpoint-down(xs)
+				margin-bottom: 10px
+		input
+			width: 100%
+			border: 1px solid darken($white,20%)
+			padding: 0px 15px
+			line-height: 36px
+			+fs(14rem)
+			+transition(all,0.3s)
+			// +bor-rad(3px)
+			+media-breakpoint-down(xs)
+				line-height: 30px
+				+fs(13rem)
+			&:hover, &:active, &:focus
+				border-color: darken($white,40%)
+			
+		.forget-password
+			display: block
+			+fs(14rem)
+			color: $main
+			margin-bottom: 0px
+			+media-breakpoint-down(xs)
+				+fs(13rem)
+				margin-bottom: 10px
+			&:hover
+				color: $green
+		.btn-continue 
+			display: block
+			float: none
+			text-align: center
+			margin: 20px 0 0
+			+media-breakpoint-down(xs)
+				margin-top: 10px
+	.login-form
+		.social-login
+			margin: 0
+			margin-top: 15px
+			background: none
+			padding: 0
+			a 
+				display: block
+				width: 216px
+				margin: 0px auto
+				margin-bottom: 10px
+				&:hover
+					filter: brightness(120%)
+				&:last-child
+					margin-bottom: 0
+.minicart
+	+pos(rel,null)
+	// margin-bottom: 50px
+	// border: 1px solid darken($white,10%)
+	padding: 0 10px
+	+bor-rad(5px)
+	overflow: hidden
+	+media-breakpoint-down(xs)
+		padding: 15px
+	.carttitle
+		margin: 0
+	.btn-edit
+		+pos(abs, 10px 20px null null)
+		+fs(0rem)
+		color: $pink
+		&:before
+			content: '\f040'
+			font-family: 'fontawesome'
+			+fs(15rem)
+		&:hover
+			color: $main
+	.carttable
+		// border: 1px solid darken($white,10%)
+		.group
+			padding: 10px 15px
+			display: table
+			width: 100%
+			border-bottom: 1px solid darken($white,10%)
+			&:last-child
+				border: none
+			.product
+				display: table-cell
+				vertical-align: top
+				.productimg
+					width: 70px
+					height: 70px
+					float: left
+					border: 1px solid darken($white,10%)
+				.productdetail
+					width: calc(100% - 70px)
+					float: left
+					padding-left: 10px
+					line-height: 1.5
+					.productname
+						font-weight: 700
+						padding: 0
+						line-height: 1.5
+						+fs(13rem)
+						a 
+							color: $main
+							display: block
+							&:hover 
+								color: $pink
+			.amount
+				display: table-cell
+				white-space: nowrap
+				vertical-align: top
+				text-align: right
+				line-height: 1.3
+				width: auto 
+				min-width: unset
+				+media-breakpoint-down(xs)
+					padding-top: 5px
+				.price 
+					font-weight: bold
+					+fs(13rem)
+					margin: 0
+					text-align: right
+				.amount
+					+fs(12rem)
+					margin: 0
+				.total
+					+fs(14rem)
+					margin: 0
+					color: $main
+			.label 
+				display: table-cell
+				text-align: left
+				+fs(13rem)
+			.value 
+				display: table-cell
+				text-align: right
+				font-weight: bold
+				color: $pink
+				+fs(14rem)
+
+.product-lastview
+	padding-bottom: 20px
+	&:before, &:after
+		content: '' 
+		display: table
+		width: 100%
+		clear: both
+	.title
+		+fs(16rem)
+		font-weight: 700
+		color: $black
+		padding: 10px 0
+		border-bottom: 1px solid $green
+		margin-bottom: 15px
+	.lastview-slide
+		.item
+			padding: 0px 5px
+			.product
+				display: flex
+				justify-content: center
+				height: 90px
+				align-items: center
+				border: 1px solid darken($white,10%)
+				+transition(all,0.3s)
+				+media-breakpoint-down(md)
+					height: 80px
+				&:hover
+					border-color: $pink
+				img 
+					max-width: 80%
+					max-height: 80%
+.help
+	display: inline-block
+	margin-left: 10px
+	color: darken($white,40%)
+	+fs(18rem)
+	+pos(rel,null)
+	+media-breakpoint-down(xs)
+		+fs(16rem)
+	.help-tip
+		+pos(abs, 50% 0 null null)
+		min-width: 140px
+		+fs(12rem)
+		padding: 5px 10px
+		background: $grey
+		+transform(translateX(calc(100% + 10px))translateY(-50%))
+		opacity: 0
+		+transition(all,0.3s)
+		margin-top: 10px
+		cursor: pointer
+		&:before 
+			content: ''
+			display: block
+			width: 0
+			height: 0
+			border: 7px solid
+			border-color: transparent $grey transparent transparent
+			+pos(abs, 50% null null 1px)
+			+transform(translateY(-50%)translate(-100%))
+			z-index: 10
+	&:hover
+		color: $main
+		.help-tip
+			opacity: 1
+			margin-top: 0
+			color: $main
+			&:hover 
+				color: $main
+
+.receive-address, .export-bill, .coupon, .shipping-kind, .payment-info
+	margin-bottom: 20px
+	padding: 0px 10px
+	// border: 1px solid darken($white,10%)
+	// +bor-rad(5px)
+	// overflow: hidden
+	+media-breakpoint-down(xs)
+		padding: 0 15px
+	.cart-form
+		padding: 0px 0px
+		.module-title
+			+fs(14rem)
+			margin-bottom: 15px
+		.des
+			+fs(14rem)
+			color: darken($white,40%)
+		.form-group
+			display: table
+			width: 100%
+			margin-bottom: 15px
+			+media-breakpoint-down(xs)
+				margin-bottom: 10px
+			.des
+				+fs(11rem)
+				color: darken($white,40%)
+			.label, .input, .hr
+				display: table-cell
+				vertical-align: middle
+				+media-breakpoint-down(xs)
+					display: block
+			.label
+				width: 200px
+				+fs(14rem)
+				+media-breakpoint-down(sm)
+					width: 150px
+				+media-breakpoint-down(xs)
+					width: 100%
+					margin-bottom: 5px
+					+fs(13rem)
+			.input
+				input, textarea, select
+					width: 100%
+					border: 1px solid darken($white,20%)
+					padding: 10px 15px
+					+fs(14rem)
+					+transition(all,0.3s)
+					+bor-rad(0px)
+					+media-breakpoint-down(xs)
+						padding: 7px 10px
+					&::-webkit-input-placeholder
+						opacity: 0.3
+					&:hover, &:active, &:focus
+						border-color: $green
+				select
+					padding: 9px 15px
+					+media-breakpoint-down(xs)
+						padding: 6px 10px
+				&.phone
+					input
+						display: inline-block
+						vertical-align: middle
+						width: 50%
+						+media-breakpoint-down(xs)
+							display: block
+							width: 100%
+					.des
+						display: inline-block
+						vertical-align: middle
+						width: 45%
+						padding-left: 10px
+						+media-breakpoint-down(xs)
+							display: block
+							width: 100%
+							padding-left: 0
+							margin-top: 5px
+		.hr
+			display: block
+			width: calc(100% - 200px)
+			height: 1px
+			background: darken($white,10%)
+			float: right
+			clear: both
+			margin: 10px 0 20px
+			+media-breakpoint-down(sm)
+				width: calc(100% - 150px)
+			+media-breakpoint-down(xs)
+				width: 100%
+		// .select-group
+		// 	margin-bottom: 10px
+		// 	input
+		// 		display: none
+		// 		+ label
+		// 			color: $main
+		// 			padding-left: 25px
+		// 			+pos(rel,null)
+		// 			&:hover
+		// 				color: $black
+		// 			&:before
+		// 				content: ''
+		// 				display: block
+		// 				width: 16px
+		// 				height: 16px
+		// 				+bor-rad(50px)
+		// 				border: 1px solid darken($white,20%)
+		// 				+pos(abs, 2px null null 0)
+		// 			&:after
+		// 				content: ''
+		// 				display: block
+		// 				width: 10px
+		// 				height: 10px
+		// 				+bor-rad(50px)
+		// 				background: $green
+		// 				+pos(abs, 5px null null 3px)
+		// 				z-index: 1
+		// 				+transition(all,0.5s)
+		// 				opacity: 0
+		// 		&:checked
+		// 			+ label
+		// 				&:after
+		// 					opacity: 1
+
+		.user-info
+			padding: 10px 0 15px
+			display: none
+
+		.input-coupon
+			margin-bottom: 20px
+			input
+				width: 40%
+				border: 1px solid darken($white,20%)
+				border-right: none
+				padding: 10px 15px
+				+fs(14rem)
+				// +bor-rad(3px 0 0 3px)
+				+transition(all,0.3s)
+				float: left
+				+media-breakpoint-down(xs)
+					padding: 8px 10px
+				&::-webkit-input-placeholder
+					opacity: 0.3
+				&:hover, &:active, &:focus
+					border-color: $pink
+				+media-breakpoint-down(xs)
+					width: calc(100% - 79px)
+			.btn-submitcoupon
+				padding: 9px 20px 8px
+				background: $pink
+				color: $white
+				// text-transform: uppercase
+				+fs(14rem)
+				+transition(all,0.3s)
+				// +bor-rad(0 3px 3px 0)
+				+media-breakpoint-down(xs)
+					padding: 0 15px
+					line-height: 34px
+					+fs(13rem)
+				&:hover
+					background: darken($pink,10%)
+		
+.receive-address
+	.carttitle 
+		&:before
+			content: '\f041'
+			font-family: 'fontawesome'
+			// +pos(abs, 7px null null 15px)
+
+.shipping-kind
+	.carttitle 
+		&:before
+			content: '\f0d1'
+			font-family: 'fontawesome'
+			// +pos(abs, 7px null null 10px)
+			// +fs(18rem)
+	.cart-form
+		.select-group
+			&:last-child
+				margin-bottom: 0
+		.des
+			margin-left: 25px
+		.popup-des
+			display: none
+			// background: darken($white,10%)
+			background: darken($white,5%)
+			padding: 10px 15px
+			margin-left: 30px
+			+bor-rad(5px)
+			+fs(14rem)
+			margin-bottom: 15px
+			+pos(rel,null)
+			&:before
+				content: ''
+				display: block
+				width: 0
+				height: 0
+				border: 7px solid
+				border-color: transparent transparent darken($white,5%) transparent
+				+pos(abs, 0 null null 10px)
+				+transform(translateY(-100%))
+			p
+				margin-bottom: 5px
+			ul 
+				list-style-type: disc
+				padding-left: 20px
+		#ship1-popup
+			display: block
+
+.export-bill
+	.carttitle 
+		+pos(rel,null)
+		padding-left: 0px
+		&:before
+			content: ''
+		.check-group
+			input 
+				+ label 
+					padding-left: 30px
+					+fs(16rem)
+					font-weight: 700
+					color: $pink
+					+media-breakpoint-down(xs)
+						+fs(14rem)
+						line-height: 1.3
+					&:before 
+						top: 11px
+						+media-breakpoint-down(xs)
+							top: 0
+					&:after 
+						top: 11px
+						background: $green
+						color: $white
+						border-color: $green
+						+media-breakpoint-down(xs)
+							top: 0
+	.title
+		margin-bottom: 15px
+	.bill-form
+		display: none
+		.des
+.coupon
+	// margin-bottom: 30px
+	margin-bottom: 0
+	+media-breakpoint-down(xs)
+		margin-bottom: 0
+	.carttitle 
+		+pos(rel,null)
+		.help
+			+pos(abs, 0px 15px null null)
+			.help-tip
+				min-width: 200px
+			&:hover
+				color: $main
+	.des
+		+fs(15rem)
+		margin-bottom: 5px
+		+media-breakpoint-down(xs)
+			+fs(13rem)
+	.cart-form
+		.module-title
+			margin-bottom: 10px
+			+media-breakpoint-down(xs)
+				+fs(13rem)
+	.btn-continue
+		+media-breakpoint-down(xs)
+			margin-top: 0
+
+
+.payment-info
+	margin-bottom: 30px
+	.cart-form
+		.payment-method
+			margin-bottom: 10px
+			+media-breakpoint-down(xs)
+				margin-bottom: 10px
+			&:last-child
+				margin-bottom: 20px
+			.select-group
+				display: block
+				padding: 0
+				margin-bottom: 0
+				input
+					+ label
+						display: block
+						width: 100%
+						padding: 0
+						padding-left: 20px
+						+fs(0)
+						&:before, &:after
+							top: 50%
+							+transform(translateY(-50%))
+						.method-info
+							display: flex
+							flex-wrap: wrap
+							// width: calc(100% - 30px)
+							width: 100%
+							border: 1px solid darken($white,10%)
+							+bor-rad(3px)
+							+transition(all,0.3s)
+							&:after
+								content: ''
+								display: table
+								width: 100%
+								height: 0
+								clear: both
+							.method-img
+								display: flex
+								justify-content: center
+								align-items: center
+								width: 85px
+								min-height: 85px
+								padding: 10px 0
+								+transition(all,0.3s)
+								+media-breakpoint-down(xs)
+									width: 40px
+									// border-right: none
+									// border-bottom: 1px solid darken($white,10%)
+							.method-detail
+								padding: 10px
+								width: calc(100% - 85px)
+								border-left: 1px solid darken($white,10%)
+								+media-breakpoint-down(xs)
+									width: calc(100% - 40px)
+									// text-align: center
+									// border: none
+								.method-name
+									+fs(14rem)
+									font-weight: 700
+									+media-breakpoint-down(xs)
+										+fs(13rem)
+								.method-des
+									+fs(13rem)
+									color: darken($white,40%)
+									+media-breakpoint-down(xs)
+										+fs(12rem)
+					&:checked
+						+ label
+							+ .boxContent
+								display: block
+							.method-info
+								border-color: $green
+								.method-img
+									border-color: $green
+								.method-detail
+									.method-name
+										color: $pink
+	.agree
+		@extend .check-group
+		margin-top: 10px
+		margin-bottom: 10px
+		padding-left: 20px
+		label 
+			+fs(14rem)
+			+pos(rel,null)
+			bottom: 0
+			right: 0
+			display: block
+			margin-bottom: 10px
+			&.error
+				font-style: italic
+				color: $red
+				margin-bottom: 15px
+			&:before, &:after
+				+transform(translateY(0%))
+				background: none
+
+.destination-address
+	+pos(rel,null)
+	padding: 0px 10px
+	// +bor-rad(5px)
+	// border: 1px solid darken($white,10%)
+	// margin-bottom: 30px
+	.btn-edit
+		+pos(abs, 10px 20px null null)
+		+fs(0rem)
+		color: $green
+		&:before
+			content: '\f040'
+			font-family: 'fontawesome'
+			+fs(15rem)
+		&:hover
+			color: $main
+	.address-info
+		padding: 15px
+		background: darken($white,3%)
+		margin-bottom: 10px
+		.name
+			font-weight: 700
+			margin-bottom: 10px
+			+fs(14rem)
+			color: $black
+		.phone, .address
+			+fs(13rem)
+			color: darken($white,60%)
+		.phone
+			font-weight: bold
+			color: $pink
+
+.thankyou
+	margin: 20px 0 50px
+	+media-breakpoint-down(md)
+		margin: 0
+	+media-breakpoint-down(xs)
+		display: none
+	img
+		height: 400px
+		+media-breakpoint-down(md)
+			height: 500px
+		+media-breakpoint-down(sm)
+			height: auto
+.payment-success
+	+fs(16rem)
+	color: darken($white,60%)
+	padding: 0px 30px
+	+media-breakpoint-down(xs)
+		margin-top: 0
+		padding: 15px
+		+fs(13rem)
+	h1
+		padding: 20px 20px 20px 60px
+		+bor-rad(5px)
+		border: 1px solid lighten($green,10%)
+		background: lighten($green,40%)
+		+fs(20rem)
+		+pos(rel,null)
+		margin-bottom: 30px
+		color: $green
+		// 	+fs(14rem)
+		+media-breakpoint-down(lg)
+			+fs(18rem)
+			padding: 25px 20px 25px 60px
+		+media-breakpoint-down(xs)
+			+fs(14rem)
+			margin-bottom: 15px
+			padding: 15px 0
+			padding-left: 45px
+		&:before
+			display: inline-block
+			vertical-align: middle
+			content: '\f058'
+			font-family: 'fontawesome'
+			+fs(42rem)
+			margin-right: 15px
+			+pos(abs, 7px null null 10px)
+			+media-breakpoint-down(xs)
+				+fs(32rem)
+	p 
+		margin-bottom: 15px
+		+media-breakpoint-down(xs)
+			margin-bottom: 10px
+	.id
+		font-weight: bold
+		color: $pink
+		+fs(24rem)
+		+media-breakpoint-down(xs)
+			+fs(16rem)
+	// a 
+		// color: $green
+		// &:hover
+		// 	color: $pink
+
+// CART PANEL
+
+.cartpanel
+	display: block
+	+pos(abs, 100% 0 null null)
+	width: 300px
+	background: $white
+	+transition(all,0.3s)
+	z-index: 115
+	+bor-rad(5px)
+	// overflow: hidden
+	box-shadow: 0 10px 30px color-rgba($black,0.2)
+	// margin-top: 20px
+	// visibility: visible
+	// opacity: 0
+	display: none
+	+media-breakpoint-down(xs)
+		+pos(fix, 60px 0 0 0)
+		width: auto 
+		margin-top: 0
+	&:before
+		content: ''
+		display: block
+		width: 0
+		height: 0
+		border: 7px solid
+		border-color: transparent transparent $pink transparent
+		+pos(abs, -14px 11px null null)
+		+media-breakpoint-down(lg)
+			right: 8px
+		+media-breakpoint-down(xs)
+			right: 22px
+	+media-breakpoint-down(lg)
+		// width: 35%
+	+media-breakpoint-down(md)
+		// width: 45%
+	+media-breakpoint-down(sm)
+		// width: 50%
+	+media-breakpoint-down(xs)
+		// width: 100%
+	&.open
+		// margin-top: 0
+		// visibility: visible
+		// opacity: 1
+		display: block
+		// box-shadow: 0.5625rem 0.5625rem 2.5rem 0.5rem rgba(0, 0, 0, 0.1)
+	> .title
+		+fs(12rem)
+		font-weight: 400
+		text-transform: uppercase
+		color: $white
+		background: $pink
+		padding: 0 15px
+		line-height: 40px
+		+bor-rad(5px 5px 0 0)
+		text-align: left !important
+		// margin-bottom: 25px
+		+media-breakpoint-down(xs)
+			+bor-rad(0)
+		.amount, a
+			// font-weight: bold
+			// margin-right: 5px
+			// +fs(18rem)
+			// color: darken($red,10%)
+			// +pos(static,null)
+			// position: static !important
+			// background: none !important
+			// text-align: left !important
+		a 
+			color: $white
+			&:after
+				content: '\f105'
+				font-family: 'fontawesome'
+				margin-left: 5px
+				// color: $pink
+			&:hover
+				text-decoration: underline
+	.btn-closecart
+		+fs(18rem)
+		width: 18px
+		height: 18px
+		color: $white
+		// background: $pink
+		+bor-rad(50%)
+		+pos(abs, 10px 10px null null)
+		line-height: 1
+		text-align: center
+		cursor: pointer
+		+transition(all,0.5s)
+		.lnr
+			&:before
+				line-height: 1
+		&:hover
+			+transform(rotateZ(180deg))
+	.cart-list
+		overflow: auto
+		max-height: 243px
+		+media-breakpoint-down(xs)
+			max-height: unset
+			height: calc(100vh - 60px - 40px - 30px - 40px)
+		ul 
+			width: 100%
+			padding: 0
+			overflow: auto
+			li 
+				width: 100%
+				padding: 10px
+				border-bottom: 1px dashed darken($white,10%)
+				+pos(rel,null)
+				+transition(all,0.5s)
+				display: flex
+				flex-wrap: wrap
+				text-align: left !important
+				&:after
+					content: ''
+					display: table
+					width: 100%
+					height: 0
+					clear: both
+				&:hover
+					background: lighten($green,65%)
+				// border-bottom: 1px solid darken($white,10%)
+				.product-img
+					display: block
+					width: 60px
+					border: 1px solid $green
+					img 
+						width: 100%
+				.product-infoSum
+					width: calc(100% - 60px)
+					padding: 5px 15px
+					text-align: left !important
+					margin-bottom: 0
+				.product-name
+					+fs(14rem)
+					font-weight: bold
+					text-align: left !important
+					a 
+						color: $main
+				.size
+					+fs(13rem)
+					// font-weight: bold
+					color: darken($white,40%)
+				.amount
+					font-weight: bold
+					color: $pink
+					font-size: 0.8rem !important
+					line-height: 1.5 !important
+					position: static !important
+					top: unset !important
+					right: unset !important
+					background: none !important
+					text-align: left !important
+					border-radius: 0 !important
+					padding: 0 !important
+				.remove-product
+					+pos(abs, 25px 10px null null)
+					+fs(18rem)
+					color: darken($white,40%)
+					+transition(all,0.5s)
+					cursor: pointer
+					&:hover
+						color: $black
+	.checkout-panel
+		// +pos(abs, null 0 0 0)
+	.total
+		display: block
+		width: 100%
+		padding: 0px 15px
+		line-height: 30px
+		+fs(15rem)
+		// background: darken($white,5%)
+		text-align: left
+		color: $main
+		strong 
+			color: $pink
+		+media-breakpoint-down(xs)
+	.button
+		display: flex
+		width: 100%
+		text-align: center
+		line-height: 1.5rem !important
+		+bor-rad(0px 0px 5px 5px)
+		overflow: hidden
+		+media-breakpoint-down(xs)
+		.btn-checkout, .btn-viewcart
+			background: $green
+			color: $white
+			padding: 0
+			line-height: 40px
+			height: 40px
+			display: block
+			+fs(13rem)
+			width: 100%
+			text-align: center
+			&:before
+				content: '\f218'
+				font-family: 'fontawesome'
+				margin-right: 5px
+			&:hover
+				background: darken($green,10%)
+		.btn-viewcart
+			width: 40%
+			border-left: 1px solid lighten($green,5%)
+
+
+ul.bankList
+	clear: both
+	height: 202px
+	width: 636px
+ul.bankList li
+	list-style-position: outside
+	list-style-type: none
+	cursor: pointer
+	float: left
+	margin-right: 0
+	padding: 5px 2px
+	text-align: center
+	width: 90px
+.list-content li
+	list-style: none outside none
+	margin: 0 0 10px
+
+.list-content li .boxContent
+	display: none
+	width: 636px
+	border: 1px solid #cccccc
+	padding: 10px
+.list-content li.active .boxContent 
+	display: block
+
+.list-content li .boxContent ul 
+	height: 280px
+
+.boxContent 
+	ul 
+		li
+			i
+				width: 80px
+				height: 30px
+				display: block
+				background: url(https://www.nganluong.vn/webskins/skins/nganluong/checkout/version3/images/bank_logo.png) no-repeat
+			i.MASTE
+				background-position: 0px -31px
+			i.AMREX
+				background-position: 0px -62px
+			i.JCB
+				background-position: 0px -93px
+			i.VCB
+				background-position: 0px -124px
+			i.TCB  
+				background-position: 0px -155px
+			i.MB  
+				background-position: 0px -186px
+			i.VIB
+				background-position: 0px -217px
+			i.ICB  
+				background-position: 0px -248px
+			i.EXB  
+				background-position: 0px -279px
+			i.ACB  
+				background-position: 0px -310px
+			i.HDB  
+				background-position: 0px -341px
+			i.MSB  
+				background-position: 0px -372px
+			i.NVB  
+				background-position: 0px -403px
+			i.DAB  
+				background-position: 0px -434px
+			i.SHB  
+				background-position: 0px -465px
+			i.OJB  
+				background-position: 0px -496px
+			i.SEA  
+				background-position: 0px -527px
+			i.TPB  
+				background-position: 0px -558px
+			i.PGB  
+				background-position: 0px -589px
+			i.BIDV  
+				background-position: 0px -620px
+			i.AGB  
+				background-position: 0px -651px
+			i.SCB  
+				background-position: 0px -682px
+			i.VPB  
+				background-position: 0px -713px
+			i.VAB  
+				background-position: 0px -744px
+			i.GPB  
+				background-position: 0px -775px
+			i.SGB  
+				background-position: 0px -806px
+			i.NAB  
+				background-position: 0px -837px
+			i.BAB  
+				background-position: 0px -868px
+			i.ABB
+				background-position: 0px -961px
+			i.EIB
+				background-position: 0px -279px
+			i.SEAB
+				background-position: 0px -527px
+			i.VTB
+				background-position: 0px -248px
+			i.OCEB
+				background-position: 0px -497px
+			i.MRTB
+				background-position: 0px -372px
+			i.BVB
+				background-position: 0px -1054px
+			i.OCB
+				background-position: 0px -992px
+			i.LPB
+				background-position: 0px -930px
+
+ul.cardList
+	+flexbox
+	flex-wrap: wrap
+ul.cardList li 
+	cursor: pointer
+	float: left
+	margin-right: 0
+	padding: 15px 20px
+	text-align: center
+	width: 20%
+	+media-breakpoint-down(sm)
+		width: 33.33%
+	+media-breakpoint-down(xs)
+		width: 50%
+
+.boxContent
+	margin-left: 20px
+	+bor-rad(5px)
+	background: darken($white,3%)
+	border: 1px solid darken($white,10%)
+	display: none
+
+.block-orderStock
+	padding: 60px
+	background: $cyan
+	margin-bottom: 40px
+	.pre-orderForm
+		width: 100%
+		padding: 30px
+		background: $white
+		margin: 0 auto
+		+media-breakpoint-up(lg)
+			width: 550px
+	.module-title
+		margin: 0
+		padding: 0
+		line-height: 1.5
+		+fs(18rem)
+		font-weight: 700
+		text-transform: uppercase
+		color: $main
+		margin-bottom: 30px
+		text-align: center
+		+media-breakpoint-down(xs)
+			+fs(15rem)
+		&:after
+			content: ''
+			display: block
+			width: 60px
+			height: 2px
+			background: $green			
+			margin: 10px auto 0
+	.wrap-form
+		max-width: 100%
+		+media-breakpoint-up(lg)
+			margin: 0 auto
+	.form-group
+		margin-bottom: 15px
+		label
+			+fs(14rem)
+			font-weight: bold
+			color: $main
+			margin-bottom: 5px
+		&.frm-btnwrap
+			label
+				display: none
+		input, textarea
+			+fs(14rem)
+			+bor-rad(3px)
+			border: none
+			background: $white
+			padding: 0 15px
+			height: 40px
+			line-height: 40px
+			width: 100%
+			font-weight: bold
+			color: $main
+			border: 1px dashed darken($white, 40%)
+			&::-webkit-input-placeholder
+				opacity: 0.5
+			&:focus
+				background: $white
+				border-color: $cyan
+		textarea
+			min-height: 100px
+	input[type="reset"]
+		display: none
+	input[type="submit"]
+		width: auto
+		+fs(16rem)
+		text-transform: uppercase
+		background: $green
+		color: $white
+		+bor-rad(3px)
+		padding: 0 15px
+		height: 35px
+		line-height: 35px
+		border: none
+		+transition(all,0.5s)
+		&:hover
+			background: darken($green, 10%)
+			color: $white
+.preOderPage
+	.landingbanner
+		margin-bottom: 0
